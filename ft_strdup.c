@@ -6,13 +6,13 @@
 /*   By: crizapat <crizapat@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/20 12:45:36 by crizapat          #+#    #+#             */
-/*   Updated: 2024/02/22 13:35:13 by crizapat         ###   ########.fr       */
+/*   Updated: 2024/03/07 17:07:45 by crizapat         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 /* 
 Permite crear una copia exacta de una cadena de caracteres existente,
-asignando memoria dinámicamente
+asignando memoria dinámicamente.
 */
 
 #include "libft.h"

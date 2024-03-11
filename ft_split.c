@@ -6,7 +6,7 @@
 /*   By: crizapat <crizapat@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/27 13:50:24 by crizapat          #+#    #+#             */
-/*   Updated: 2024/03/04 20:04:56 by crizapat         ###   ########.fr       */
+/*   Updated: 2024/03/08 12:21:11 by crizapat         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,11 +14,11 @@
 
 static size_t	words_counter(const char *str, char c)
 {
-	size_t i;
-	size_t wordsToSave;
+	size_t	i;
+	size_t	words_to_save;
 
 	i = 0;
-	wordsToSave = 0;
+	words_to_save = 0;
 	while (str[i] != '\0')
 	{
 		while (str[i] == c)
@@ -27,10 +27,10 @@ static size_t	words_counter(const char *str, char c)
 		{
 			i++;
 			if (str[i] == c || str[i] == '\0')
-				wordsToSave++;
+				words_to_save++;
 		}
 	}
-	return (wordsToSave);
+	return (words_to_save);
 }
 
 static char	**free_blocks(int i, char **block)
@@ -43,9 +43,9 @@ static char	**free_blocks(int i, char **block)
 
 static char	**fill_block(const char *s, char c, char **blocks)
 {
-	int i;
+	int	i;
 	int	start;
-	int position;
+	int	position;
 
 	i = 0;
 	start = 0;
@@ -82,26 +82,25 @@ char	**ft_split(char const *s, char c)
 	return (fill_block(s, c, blocks));
 }
 
-int main()
+/* int	main()
 {
-    char const *str = "Hola, estoy cansada de programar";
-    char c = ' ';
+	char const *str = "Hola, estamos melos para darle duro al split";
+	char c = ' ';
 
-    char **token = ft_split(str, c);
-    if (token == NULL)
-    {
-        printf("Error al dividir la cadena.\n");
-        return (1);
-    }
+	char **response = ft_split(str, c);
+	if (response == NULL)
+	{
+		printf("Hubo un error al realizar la división de la cadena\n");
+		return (1);
+	}
 
-    int i = 0;
-    while (token[i] != NULL)
-    {
-        printf("Token %d: %s\n", i + 1, token[i]);
-        free(token[i]);
-        i++;
-    }
-    free(token);
-
-    return (0);
-}
+	int i = 0;
+	while (response[i] != NULL)
+	{
+		printf("Response %d: %s\n", i + 1, response[i]);
+		free(response[i]);
+		i++;
+	}
+	free(response);
+	return (0);
+} */

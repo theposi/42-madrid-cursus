@@ -6,7 +6,7 @@
 #    By: crizapat <crizapat@student.42madrid.com    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/01/29 14:24:57 by crizapat          #+#    #+#              #
-#    Updated: 2024/02/27 10:08:46 by crizapat         ###   ########.fr        #
+#    Updated: 2024/03/11 14:06:37 by crizapat         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -40,22 +40,27 @@ ft_calloc.c \
 ft_strdup.c \
 ft_substr.c \
 ft_strjoin.c \
-ft_strtrim.c
+ft_strtrim.c \
+ft_split.c \
+ft_itoa.c \
+ft_strmapi.c \
+ft_striteri.c \
+ft_putchar_fd.c \
+ft_putstr_fd.c
 
-OBJ		=	$(SRC:.c=.o)
-all	:	$(NAME)
+OBJ         =   $(SRC:.c=.o)
+
+all : $(NAME)
 
 $(NAME) : $(OBJ)
-	@ar rcs $(NAME) $(OBJ)
-
-$(OBJ) : %.o : %.c
-	@$(CC) $(CFLAGS) -c $< -o $@
+    ar -r $(NAME) $(OBJ)
 
 clean :
-	@rm -rf $(OBJ)
+    rm -f $(OBJ)
 
 fclean : clean
-	@rm -rf $(NAME)
+    rm -f $(NAME)
 
 re : fclean all
-	.PHONY : all cleam fclean re
+
+.PHONY : all clean fclean re
