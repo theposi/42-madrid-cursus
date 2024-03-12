@@ -6,15 +6,12 @@
 #    By: crizapat <crizapat@student.42madrid.com    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/01/29 14:24:57 by crizapat          #+#    #+#              #
-#    Updated: 2024/03/11 14:06:37 by crizapat         ###   ########.fr        #
+#    Updated: 2024/03/12 13:45:21 by crizapat         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 NAME		= 	libft.a
-CC			=	gcc
 CFLAGS		=	-Wall -Wextra -Werror
-INCLUDE	=	libft.h
-
 SRC			=	ft_isalpha.c \
 ft_isalnum.c \
 ft_isdigit.c \
@@ -46,21 +43,34 @@ ft_itoa.c \
 ft_strmapi.c \
 ft_striteri.c \
 ft_putchar_fd.c \
-ft_putstr_fd.c
+ft_putstr_fd.c \
+ft_putendl_fd.c \
+ft_putnbr_fd.c
 
-OBJ         =   $(SRC:.c=.o)
+SRC_BONUS	=	ft_lstnew.c \
+ft_lstadd_front.c
 
-all : $(NAME)
+OBJ = $(SRC:.c=.o)
+OBJ_BONUS = $(SRC_BONUS:.c=.o)
+INCLUDE = -I.
 
-$(NAME) : $(OBJ)
-    ar -r $(NAME) $(OBJ)
+all: $(NAME)
 
-clean :
-    rm -f $(OBJ)
+$(NAME): $(OBJ)
+    ar rcs $(NAME) $(OBJ)
 
-fclean : clean
+%.o: %.c
+    $(CC) $(CFLAGS) $(INCLUDE) -c -o $@ $<
+
+bonus: $(OBJ_BONUS)
+    ar rcs $(NAME) $(OBJ_BONUS)
+
+clean:
+    rm -f $(OBJ) $(OBJ_BONUS)
+
+fclean: clean
     rm -f $(NAME)
 
-re : fclean all
+re: fclean all
 
 .PHONY : all clean fclean re

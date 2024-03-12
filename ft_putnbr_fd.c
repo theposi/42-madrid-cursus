@@ -1,29 +1,43 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_putendl_fd.c                                    :+:      :+:    :+:   */
+/*   ft_putnbr_fd.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: crizapat <crizapat@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/03/11 14:09:19 by crizapat          #+#    #+#             */
-/*   Updated: 2024/03/12 12:03:28 by crizapat         ###   ########.fr       */
+/*   Created: 2024/03/12 12:04:15 by crizapat          #+#    #+#             */
+/*   Updated: 2024/03/12 12:40:31 by crizapat         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	ft_putendl_fd(char *s, int fd)
+void	ft_putnbr_fd(int n, int fd)
 {
-	ft_putstr_fd(s, fd);
-	write(fd, "\n", 1);
+	unsigned int	numb;
+
+	if (n >= 0)
+	{
+		numb = n;
+	}
+	else
+	{
+		numb = -n;
+		write(fd, "-", 1);
+	}
+	if (numb >= 10)
+	{
+		ft_putnbr_fd(numb / 10, fd);
+		ft_putchar_fd(numb % 10 + '0', fd);
+	}
+	else
+	{
+		ft_putchar_fd(numb + '0', fd);
+	}
 }
 
-/* #include <fcntl.h>
-int main()
+/* int main()
 {
-    char *str = "Hot Wheels";
-    int fd = open("test", O_RDWR);
-    ft_putendl_fd(str, fd);
-    close(fd);
-    return (0);
+	ft_putnbr_fd(0, 1);
+	return (0);
 } */
