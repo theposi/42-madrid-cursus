@@ -57,19 +57,19 @@ INCLUDE = -I.
 all: $(NAME)
 
 $(NAME): $(OBJ)
-    ar rcs $(NAME) $(OBJ)
+	ar rcs $(NAME) $(OBJ)
 
 %.o: %.c
-    $(CC) $(CFLAGS) $(INCLUDE) -c -o $@ $<
+	$(CC) $(CFLAGS) $(INCLUDE) -c -o $@ $<
 
 bonus: $(OBJ_BONUS)
-    ar rcs $(NAME) $(OBJ_BONUS)
+	ar rcs $(NAME) $(OBJ_BONUS)
 
 clean:
-    rm -f $(OBJ) $(OBJ_BONUS)
+	rm -f $(OBJ) $(OBJ_BONUS)
 
 fclean: clean
-    rm -f $(NAME)
+	rm -f $(NAME)
 
 re: fclean all
 

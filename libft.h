@@ -20,9 +20,9 @@
 
 typedef struct s_list
 {
-	void *content;
-	struct s_list *next;
-} 				t_list;
+	void			*content;
+	struct s_list	*next;
+}	t_list;
 
 int		ft_isalpha(int character);
 int		ft_isdigit(int number);
