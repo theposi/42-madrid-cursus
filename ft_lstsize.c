@@ -1,40 +1,38 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_lstlast.c                                       :+:      :+:    :+:   */
+/*   ft_lstsize.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: crizapat <crizapat@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/03/16 13:05:59 by crizapat          #+#    #+#             */
-/*   Updated: 2024/03/17 17:48:44 by crizapat         ###   ########.fr       */
+/*   Created: 2024/03/14 09:00:37 by crizapat          #+#    #+#             */
+/*   Updated: 2024/03/15 18:20:21 by crizapat         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-t_list	*ft_lstlast(t_list *lst)
+int	ft_lstsize(t_list *lst)
 {
+	int	i;
+
+	i = 1;
 	if (!lst)
-		return (NULL);
+		return (0);
 	while (lst->next)
+	{
 		lst = lst->next;
-	return (lst);
+		i++;
+	}
+	return (i);
 }
 
-/* int main()
+int main()
 {
-	t_list *lst;
-	t_list *node_one;
+	t_list *lst = ft_lstnew("nodo número uno");
+	ft_lstadd_front(&lst, ft_lstnew("nodo número dos"));
+	ft_lstadd_front(&lst, ft_lstnew("nodo número tres"));
 
-	node_one = ft_lstnew("First node");
-
-	if (!node_one)
-	{
-		free(node_one);
-	}
-	lst = node_one;
-	t_list *last_node = ft_lstlast(lst);
-	printf("%s\n", (char *)last_node->content);
-	free(node_one);
+	printf("Tamaño de la lista: %d\n", ft_lstsize(lst));
 	return (0);
-} */
+}
