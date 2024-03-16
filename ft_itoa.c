@@ -32,15 +32,15 @@ static int	ft_digit_counter(long int i)
 	return (counter);
 }
 
-char	*ft_itoa(int n)
+char	*ft_itoa(int num)
 {
 	char	*str;
 	int		i;
 	long	numb;
 
-	if (n == 0)
+	if (num == 0)
 		return (ft_strdup("0"));
-	numb = (long)n;
+	numb = (long)num;
 	i = ft_digit_counter(numb);
 	str = ft_calloc((i + 1), sizeof(char));
 	if (!str)

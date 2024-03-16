@@ -15,23 +15,23 @@ y al final de una cadena. */
 
 #include "libft.h"
 
-char	*ft_strtrim(char const *s1, char const *set)
+char	*ft_strtrim(char const *str, char const *set)
 {
 	char	*newptr;
 	size_t	i;
 	size_t	j;
 
 	i = 0;
-	j = ft_strlen(s1);
-	if (!s1)
+	j = ft_strlen(str);
+	if (!str)
 		return (0);
 	if (!set)
-		return (ft_strdup(s1));
-	while (s1[i] && ft_strchr(set, s1[i]))
+		return (ft_strdup(str));
+	while (str[i] && ft_strchr(set, str[i]))
 		i++;
-	while (j > 0 && ft_strchr(set, s1[j]))
+	while (j > 0 && ft_strchr(set, str[j]))
 		j--;
-	newptr = ft_substr(s1, i, (j + 1) - i);
+	newptr = ft_substr(str, i, (j + 1) - i);
 	return (newptr);
 }
 

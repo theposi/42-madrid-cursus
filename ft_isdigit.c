@@ -12,16 +12,16 @@
 
 #include "libft.h"
 
-int	ft_isdigit(int number)
+int	ft_isdigit(int numb)
 {
-	if (number >= '0' && number <= '9')
+	if (numb >= '0' && numb <= '9')
 		return (1);
 	return (0);
 }
 
 /* int	main(void)
 {
-	int	number = ft_isdigit('5');
-	printf("%d\n", number);
+	int	numb = ft_isdigit('5');
+	printf("%d\n", numb);
 	return (0);
 } */

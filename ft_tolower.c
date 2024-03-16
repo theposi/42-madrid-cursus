@@ -12,11 +12,11 @@
 
 #include "libft.h"
 
-int	ft_tolower(int c)
+int	ft_tolower(int charac)
 {
-	if (c >= 65 && c <= 90)
-		return (c + 32);
-	return (c);
+	if (charac >= 65 && charac <= 90)
+		return (charac + 32);
+	return (charac);
 }
 
 /* int main()

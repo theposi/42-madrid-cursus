@@ -10,32 +10,28 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-/* Toma una cadena de entrada, un índice de inicio y una longitud,
-y devuelve una nueva cadena que es un subconjunto de la cadena original,
-comenzando desde el índice de inicio y con una longitud dada. */
-
 #include "libft.h"
 
-char	*ft_substr(char const *s, unsigned int start, size_t len)
+char	*ft_substr(char const *str, unsigned int start, size_t len)
 {
 	char	*newstr;
-	size_t	newslen;
-	size_t	newsend;
+	size_t	newstrlen;
+	size_t	newstrend;
 
-	if (!s)
+	if (!str)
 		return (0);
-	newslen = ft_strlen(s);
-	if (start > newslen)
+	newstrlen = ft_strlen(str);
+	if (start > newstrlen)
 		return (ft_strdup(""));
-	newsend = 0;
-	if (start < newslen)
-		newsend = newslen - start;
-	if (newslen > len)
-		newsend = len;
-	newstr = (char *)malloc(sizeof(char) * (newsend + 1));
+	newstrend = 0;
+	if (start < newstrlen)
+		newstrend = newstrlen - start;
+	if (newstrlen > len)
+		newstrend = len;
+	newstr = (char *)malloc(sizeof(char) * (newstrend + 1));
 	if (!newstr)
 		return (0);
-	ft_strlcpy(newstr, s + start, newsend + 1);
+	ft_strlcpy(newstr, str + start, newstrend + 1);
 	return (newstr);
 }
 

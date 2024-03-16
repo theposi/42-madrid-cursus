@@ -11,16 +11,15 @@
 /* ************************************************************************** */
 
 #include "libft.h"
-//Copy the dstsize - 1 characters from the string src to dst
 
-size_t	ft_strlcpy(char *dst, const char *src, size_t dstsize)
+size_t	ft_strlcpy(char *dst, const char *src, size_t len)
 {
 	size_t	i;
 
 	i = 0;
-	if (dstsize > 0)
+	if (len > 0)
 	{
-		while (i < dstsize - 1 && src[i] != '\0')
+		while (i < len - 1 && src[i] != '\0')
 		{
 			dst[i] = src[i];
 			i++;

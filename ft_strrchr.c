@@ -12,16 +12,16 @@
 
 #include "libft.h"
 
-char	*ft_strrchr(const char *str, int c)
+char	*ft_strrchr(const char *str, int charac)
 {
 	int	i;
 
 	i = ft_strlen(str);
 	while (i >= 0)
 	{
-		if ((unsigned char)str[i] == (unsigned char)c)
+		if ((unsigned char)str[i] == (unsigned char)charac)
 			return ((char *)&str[i]);
-		if (c == 0 && str[i] == '\0')
+		if (charac == 0 && str[i] == '\0')
 			return ((char *)&str[i]);
 		i--;
 	}

@@ -15,15 +15,15 @@ caracteres y devuelve un puntero a esa ubicación. */
 
 #include "libft.h"
 
-char	*ft_strchr(const char *a, int character)
+char	*ft_strchr(const char *str, int charac)
 {
-	while ((char) character != *a)
+	while ((char) charac != *str)
 	{
-		if (!*a)
+		if (!*str)
 			return (0);
-		a++;
+		str++;
 	}
-	return ((char *)a);
+	return ((char *)str);
 }
 /* int	main()
 {

@@ -10,8 +10,6 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-/* Asigna memoria para un arreglo de elementos y la inicializa a cero */
-
 #include "libft.h"
 
 void	*ft_calloc(size_t items, size_t size)

@@ -10,23 +10,18 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-/* 
-Permite crear una copia exacta de una cadena de caracteres existente,
-asignando memoria dinámicamente.
-*/
-
 #include "libft.h"
 
-char	*ft_strdup(const char *src)
+char	*ft_strdup(const char *str)
 {
 	size_t	size;
 	char	*dest;
 
-	size = ft_strlen(src);
+	size = ft_strlen(str);
 	dest = (char *)malloc((size + 1) * sizeof(char));
 	if (dest == NULL)
 		return (NULL);
-	ft_memcpy(dest, src, size);
+	ft_memcpy(dest, str, size);
 	dest[size] = '\0';
 	return (dest);
 }

@@ -48,7 +48,8 @@ ft_putendl_fd.c \
 ft_putnbr_fd.c
 
 SRC_BONUS	=	ft_lstnew.c \
-ft_lstadd_front.c
+ft_lstadd_front.c \
+ft_lstlast.c
 
 OBJ = $(SRC:.c=.o)
 OBJ_BONUS = $(SRC_BONUS:.c=.o)

@@ -11,14 +11,12 @@
 /* ************************************************************************** */
 
 #include "libft.h"
-// Convert the lowercase parameter (character)
-// to the equivalent uppercase character.
 
-int	ft_toupper(int c)
+int	ft_toupper(int charac)
 {
-	if (c >= 97 && c <= 122)
-		return (c - 32);
-	return (c);
+	if (charac >= 97 && charac <= 122)
+		return (charac - 32);
+	return (charac);
 }
 
 /* int	main()

@@ -13,14 +13,14 @@
 #include "libft.h"
 // Copy n bytes from memory pointed for *dst to memory space in *src
 
-void	*ft_memcpy(void *dst, const void *src, size_t n)
+void	*ft_memcpy(void *dst, const void *src, size_t len)
 {
 	size_t	i;
 
 	i = 0;
 	if (!dst && !src)
 		return (dst);
-	while (i < n)
+	while (i < len)
 	{
 		((unsigned char *)dst)[i] = ((unsigned char *)src)[i];
 		i++;

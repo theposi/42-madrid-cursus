@@ -10,11 +10,6 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-/* Esta función convierte una cadena de caracteres que representa un número en
-formato ASCII en su equivalente entero. Ignora los espacios iniciales,
-interpreta el signo opcional y detiene la conversión cuando encuentra un
-carácter que no es un dígito. Devuelve el número convertido como un entero. */
-
 #include "libft.h"
 
 int	ft_atoi(const char *str)

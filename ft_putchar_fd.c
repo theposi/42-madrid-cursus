@@ -10,13 +10,11 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-/* Se usa para escribir un solo carácter en un descriptor de archivo dado. */
-
 #include "libft.h"
 
-void	ft_putchar_fd(char c, int fd)
+void	ft_putchar_fd(char charac, int fd)
 {
-	write(fd, &c, 1);
+	write(fd, &charac, 1);
 }
 
 /* int main()

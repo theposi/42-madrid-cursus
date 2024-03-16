@@ -11,20 +11,19 @@
 /* ************************************************************************** */
 
 #include "libft.h"
-// Appends string src to the end of dst and will append at most dstsize 
 
-size_t	ft_strlcat(char *dst, const char *src, size_t dstsize)
+size_t	ft_strlcat(char *dst, const char *src, size_t len)
 {
 	size_t	i;
 	size_t	j;
 
-	if (!dstsize && !dst)
+	if (!len && !dst)
 		return (0);
-	if (dstsize <= ft_strlen(dst))
-		return (dstsize + ft_strlen(src));
+	if (len <= ft_strlen(dst))
+		return (len + ft_strlen(src));
 	i = ft_strlen(dst);
 	j = 0;
-	while (src[j] != '\0' && i + 1 < dstsize)
+	while (src[j] != '\0' && i + 1 < len)
 	{
 		dst[i] = src[j];
 		i++;

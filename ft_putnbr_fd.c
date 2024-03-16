@@ -12,27 +12,27 @@
 
 #include "libft.h"
 
-void	ft_putnbr_fd(int n, int fd)
+void	ft_putnbr_fd(int num, int fd)
 {
-	unsigned int	numb;
+	unsigned int	number;
 
-	if (n >= 0)
+	if (num >= 0)
 	{
-		numb = n;
+		number = num;
 	}
 	else
 	{
-		numb = -n;
+		number = -num;
 		write(fd, "-", 1);
 	}
-	if (numb >= 10)
+	if (number >= 10)
 	{
-		ft_putnbr_fd(numb / 10, fd);
-		ft_putchar_fd(numb % 10 + '0', fd);
+		ft_putnbr_fd(number / 10, fd);
+		ft_putchar_fd(number % 10 + '0', fd);
 	}
 	else
 	{
-		ft_putchar_fd(numb + '0', fd);
+		ft_putchar_fd(number + '0', fd);
 	}
 }
 

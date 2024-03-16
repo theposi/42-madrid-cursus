@@ -10,26 +10,22 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-/* Toma una cadena de caracteres y una función que opera en cada carácter de la
-cadena y devuelve una nueva cadena con los resultados de aplicar
-la función a cada carácter.  */
-
 #include "libft.h"
 
-char	*ft_strmapi(char const *s, char (*f)(unsigned int, char))
+char	*ft_strmapi(char const *str, char (*f)(unsigned int, char))
 {
 	unsigned int	i;
 	char			*dest;
 	unsigned int	length;
 
 	i = 0;
-	length = ft_strlen(s);
-	dest = ft_strdup(s);
+	length = ft_strlen(str);
+	dest = ft_strdup(str);
 	if (!dest)
 		return (NULL);
 	while (i < length)
 	{
-		dest[i] = f(i, s[i]);
+		dest[i] = f(i, str[i]);
 		i++;
 	}
 	return (dest);

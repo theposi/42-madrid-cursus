@@ -70,16 +70,16 @@ static char	**fill_block(const char *s, char c, char **blocks)
 	return (blocks);
 }
 
-char	**ft_split(char const *s, char c)
+char	**ft_split(char const *str, char charac)
 {
 	size_t		words;
 	char		**blocks;
 
-	words = words_counter(s, c);
+	words = words_counter(str, charac);
 	blocks = (char **)ft_calloc((words + 1), sizeof(char *));
 	if (!blocks)
 		return (NULL);
-	return (fill_block(s, c, blocks));
+	return (fill_block(str, charac, blocks));
 }
 
 /* int	main()
