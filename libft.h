@@ -6,7 +6,7 @@
 /*   By: crizapat <crizapat@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/14 14:37:19 by crizapat          #+#    #+#             */
-/*   Updated: 2024/03/17 17:48:56 by crizapat         ###   ########.fr       */
+/*   Updated: 2024/03/17 23:37:06 by crizapat         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -341,14 +341,57 @@ t_list				*ft_lstnew(void *content);
  */
 void				ft_lstadd_front(t_list **lst, t_list *new);
 
-/* Otras 2 que faltan */
+/**
+ * Cuenta el número de nodos de una lista.
+ * @param lst  inicio de la lista.
+ * @return número de nodos.
+ */
+int					ft_lstsize(t_list *lst);
 
 /**
- * ft_lstlast
  * Devuelve el último nodo de la lista.
  * @param lst  inicio de la lista.
  * @return último nodo de la lista.
 */
 t_list				*ft_lstlast(t_list *lst);
+
+/**
+ * Añade el nodo ’new’ al final de la lista.
+ * @param lst  dirección de un puntero al primer nodo de una lista.
+ * @param new  un puntero al nodo que añadir al final de la lista.
+*/
+void				ft_lstadd_back(t_list **lst, t_list *new);
+
+/**
+ * Libera la memoria del nodo pasado como argumento
+ * utilizando la función ’del’ y después libera el nodo.
+ * @param lst  dirección de un puntero al nodo que hay que liberar.
+ * @param del  función que permite liberar el contenido
+*/
+void				ft_lstdelone(t_list *lst, void (*del)(void *));
+
+/**
+ * Libera la memoria de ’lst’ y de todos sus nodos.
+ * @param lst  dirección de un puntero al primer nodo de la lista a liberar.
+ * @param del  función que permite liberar el contenido de un nodo.
+*/
+void				ft_lstclear(t_list **lst, void (*del)(void *));
+
+/**
+ * Itera sobre la lista ’lst’ y aplica la función ’f’
+ * @param lst  dirección de un puntero al primer nodo de una lista.
+ * @param f  dirección de la función que hay que aplicar.
+*/
+void				ft_lstiter(t_list *lst, void (*f)(void *));
+
+/**
+ * Itera sobre la lista ’lst’ y aplica la función ’f’ a los nodos.
+ * Crea una nueva lista con el resultado.
+ * @param lst  dirección de un puntero al primer nodo de una lista.
+ * @param f  función que hay que aplicar.
+ * @return nueva lista.
+*/
+t_list				*ft_lstmap(t_list *lst, void *(*f)(void *),
+						void (*del)(void *));
 
 #endif

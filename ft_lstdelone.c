@@ -1,38 +1,22 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_lstsize.c                                       :+:      :+:    :+:   */
+/*   ft_lstdelone.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: crizapat <crizapat@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/03/14 09:00:37 by crizapat          #+#    #+#             */
-/*   Updated: 2024/03/17 18:39:31 by crizapat         ###   ########.fr       */
+/*   Created: 2024/03/17 19:23:00 by crizapat          #+#    #+#             */
+/*   Updated: 2024/03/17 23:37:44 by crizapat         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	ft_lstsize(t_list *lst)
+void	ft_lstdelone(t_list *lst, void (*del)(void*))
 {
-	int	i;
-
-	i = 1;
-	if (!lst)
-		return (0);
-	while (lst->next)
-	{
-		lst = lst->next;
-		i++;
-	}
-	return (i);
+	if (!lst || !del)
+		return ;
+	del(lst->content);
+	free(lst);
+	lst = NULL;
 }
-
-/* int main()
-{
-	t_list *lst = ft_lstnew("nodo número uno");
-	ft_lstadd_front(&lst, ft_lstnew("nodo número dos"));
-	ft_lstadd_front(&lst, ft_lstnew("nodo número tres"));
-
-	printf("Tamaño de la lista: %d\n", ft_lstsize(lst));
-	return (0);
-} */
