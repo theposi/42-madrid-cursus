@@ -11,6 +11,7 @@
 # **************************************************************************** #
 
 NAME		= 	libft.a
+CC			=	gcc
 CFLAGS		=	-Wall -Wextra -Werror
 SRC			=	ft_isalpha.c	\
 				ft_isalnum.c	\
@@ -49,6 +50,7 @@ SRC			=	ft_isalpha.c	\
 
 SRC_BONUS	=	ft_lstnew.c			\
 				ft_lstadd_front.c	\
+				ft_lstsize.c		\
 				ft_lstlast.c		\
 				ft_lstadd_back.c	\
 				ft_lstdelone.c		\

@@ -229,13 +229,13 @@ char				*ft_strdup(const char *str);
  * Si 'len' especifica una longitud mayor que la longitud restante de la
  * cadena después de 'start',
  * la subcadena contendrá solo los caracteres restantes de la cadena.
- * @param str La cadena de la cual se extraerá la subcadena.
+ * @param s La cadena de la cual se extraerá la subcadena.
  * @param start La posición inicial desde la cual se extraerá la subcadena.
  * @param len La longitud máxima de la subcadena a extraer.
  * @return Un puntero a la subcadena extraída, o NULL si falla la
  * asignación de memoria.
  */
-char				*ft_substr(const char *str, unsigned int start, size_t len);
+char				*ft_substr(char const *s, unsigned int start, size_t len);
 
 /**
  * Reserva (con malloc(3)) y devuelve una nueva string,

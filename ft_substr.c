@@ -12,27 +12,27 @@
 
 #include "libft.h"
 
-char	*ft_substr(char const *str, unsigned int start, size_t len)
+char	*ft_substr(char const *s, unsigned int start, size_t len)
 {
-	char	*newstr;
-	size_t	newstrlen;
-	size_t	newstrend;
+	char	*new;
+	size_t	slen;
+	size_t	end;
 
-	if (!str)
+	if (!s)
 		return (0);
-	newstrlen = ft_strlen(str);
-	if (start > newstrlen)
+	slen = ft_strlen(s);
+	if (start > slen)
 		return (ft_strdup(""));
-	newstrend = 0;
-	if (start < newstrlen)
-		newstrend = newstrlen - start;
-	if (newstrlen > len)
-		newstrend = len;
-	newstr = (char *)malloc(sizeof(char) * (newstrend + 1));
-	if (!newstr)
+	end = 0;
+	if (start < slen)
+		end = slen - start;
+	if (end > len)
+		end = len;
+	new = (char *)malloc(sizeof(char) * (end + 1));
+	if (!new)
 		return (0);
-	ft_strlcpy(newstr, str + start, newstrend + 1);
-	return (newstr);
+	ft_strlcpy (new, s + start, end + 1);
+	return (new);
 }
 
 /* int main() {
@@ -42,9 +42,9 @@ char	*ft_substr(char const *str, unsigned int start, size_t len)
 
     printf("Original: %s\n", str);
 
-    char *newstr = ft_substr(str, start, len);
-    if (newstr) {
-        printf("Substring: %s\n", newstr);
+    char *str = ft_substr(str, start, len);
+    if (str) {
+        printf("Substring: %s\n", str);
     } else {
         printf("Error al extraer el substring.\n");
     }
