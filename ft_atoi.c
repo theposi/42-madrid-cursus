@@ -32,8 +32,8 @@ int	ft_atoi(const char *str)
 		i++;
 	while (ft_isdigit(str[i]))
 	{
-		res *= 10;
-		res += str[i] - '0';
+		res = res * 10;
+		res = res + (str[i] - '0');
 		i++;
 	}
 	return (res * sign);
@@ -41,7 +41,7 @@ int	ft_atoi(const char *str)
 
 /* int	main()
 {
-	const char str[] = " 7~7 c";
+	const char str[] = " -77 c";
 	int response = ft_atoi(str);
 	printf("El valor es: %d\n", response);
 	return (0);

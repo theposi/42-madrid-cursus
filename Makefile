@@ -61,18 +61,19 @@ SRC_BONUS	=	ft_lstnew.c			\
 
 OBJ			=	$(SRC:.c=.o)
 OBJ_BONUS	=	$(SRC_BONUS:.c=.o)
-INCLUDE		=	-I.
+INCLUDE		=	libft.h
 
 all: $(NAME)
 
-$(NAME): $(OBJ)
-	ar rcs $(NAME) $(OBJ)
+
+bonus: $(OBJ) $(OBJ_BONUS)
+	ar -rc $(NAME) $(OBJ_BONUS) $?
 
 %.o: %.c
-	$(CC) $(CFLAGS) $(INCLUDE) -c -o $@ $<
+	$(CC) $(CFLAGS) -c $< -o $@
 
-bonus: $(OBJ_BONUS)
-	ar rcs $(NAME) $(OBJ_BONUS)
+$(NAME): $(OBJ) $(INCLUDE)
+	ar -rc $(NAME) $(OBJ)
 
 clean:
 	rm -f $(OBJ) $(OBJ_BONUS)

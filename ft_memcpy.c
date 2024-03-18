@@ -11,7 +11,6 @@
 /* ************************************************************************** */
 
 #include "libft.h"
-// Copy n bytes from memory pointed for *dst to memory space in *src
 
 void	*ft_memcpy(void *dst, const void *src, size_t len)
 {

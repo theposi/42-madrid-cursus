@@ -11,7 +11,6 @@
 /* ************************************************************************** */
 
 #include "libft.h"
-// Copy len bytes from src to dst memory space
 
 void	*ft_memmove(void *dst, const void *src, size_t len)
 {
@@ -40,7 +39,7 @@ void	*ft_memmove(void *dst, const void *src, size_t len)
 	return (dst);
 }
 
-/* int main(void)
+int main(void)
 {
     char src[] = "Hola Marventis!";
     char dest[20];
@@ -53,4 +52,4 @@ void	*ft_memmove(void *dst, const void *src, size_t len)
     printf("Después de ft_memmove: \"%s\"\n", dest);
 
     return (0);
-} */
+}

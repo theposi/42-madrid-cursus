@@ -21,12 +21,12 @@ static int	ft_digit_counter(long int i)
 	counter = 0;
 	if (i < 0)
 	{
-		i *= -1;
+		i = -i;
 		counter++;
 	}
 	while (i > 0)
 	{
-		i /= 10;
+		i = i / 10;
 		counter++;
 	}
 	return (counter);
@@ -35,17 +35,17 @@ static int	ft_digit_counter(long int i)
 char	*ft_itoa(int num)
 {
 	char	*str;
-	int		i;
+	int		nchars;
 	long	numb;
 
 	if (num == 0)
 		return (ft_strdup("0"));
 	numb = (long)num;
-	i = ft_digit_counter(numb);
-	str = ft_calloc((i + 1), sizeof(char));
+	nchars = ft_digit_counter(numb);
+	str = ft_calloc((nchars + 1), sizeof(char));
 	if (!str)
 		return (NULL);
-	i--;
+	nchars--;
 	if (numb < 0)
 	{
 		str[0] = '-';
@@ -53,7 +53,7 @@ char	*ft_itoa(int num)
 	}
 	while (numb > 0)
 	{
-		str[i--] = numb % 10 + '0';
+		str[nchars--] = numb % 10 + '0';
 		numb = numb / 10;
 	}
 	return (str);
@@ -61,7 +61,7 @@ char	*ft_itoa(int num)
 
 /* int	main(void)
 {
-	int n = -2147483647;
+	int n = 2147483647;
 	char *response = ft_itoa(n);
 	printf("El caracter que se trasformó es: %s\n", response);
 	return (0);
