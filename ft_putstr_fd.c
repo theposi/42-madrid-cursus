@@ -6,7 +6,7 @@
 /*   By: crizapat <crizapat@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/11 13:47:16 by crizapat          #+#    #+#             */
-/*   Updated: 2024/03/11 14:08:10 by crizapat         ###   ########.fr       */
+/*   Updated: 2024/03/20 00:54:20 by crizapat         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,11 +23,3 @@ void	ft_putstr_fd(char *str, int fd)
 		i++;
 	}
 }
-
-/* int main()
-{
-	char *s = "Estamos melos mi fai.\n";
-	int fd = 1;
-	ft_putstr_fd(s, fd);
-	return (0);
-} */

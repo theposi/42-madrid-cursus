@@ -6,7 +6,7 @@
 /*   By: crizapat <crizapat@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/14 13:09:26 by crizapat          #+#    #+#             */
-/*   Updated: 2024/01/14 14:12:32 by crizapat         ###   ########.fr       */
+/*   Updated: 2024/03/20 00:51:35 by crizapat         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,10 +20,3 @@ int	ft_isalnum(int alnum)
 		return (1);
 	return (0);
 }
-
-/* int main(void)
-{
-    int alnum = ft_isalnum('$');
-    printf("%d\n", alnum);
-    return(0);
-} */

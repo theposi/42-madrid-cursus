@@ -6,7 +6,7 @@
 /*   By: crizapat <crizapat@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/20 11:38:49 by crizapat          #+#    #+#             */
-/*   Updated: 2024/02/22 12:51:59 by crizapat         ###   ########.fr       */
+/*   Updated: 2024/03/20 00:51:05 by crizapat         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -38,11 +38,3 @@ int	ft_atoi(const char *str)
 	}
 	return (res * sign);
 }
-
-/* int	main()
-{
-	const char str[] = " -77 c";
-	int response = ft_atoi(str);
-	printf("El valor es: %d\n", response);
-	return (0);
-} */

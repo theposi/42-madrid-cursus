@@ -6,7 +6,7 @@
 /*   By: crizapat <crizapat@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/30 10:55:59 by crizapat          #+#    #+#             */
-/*   Updated: 2024/01/30 12:09:23 by crizapat         ###   ########.fr       */
+/*   Updated: 2024/03/20 00:37:45 by crizapat         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,22 +27,3 @@ int	ft_strncmp(const char *str1, const char *str2, size_t len)
 	}
 	return (0);
 }
-
-/* int main()
-{
-	char prueba1[] = "Hola mi gente";	
-	char prueba2[] = "Hola my people";
-	size_t n = 6;
-
-	int response = ft_strncmp(prueba1, prueba2, n);
-	
-	if (response == 0)
-        printf("Las cadenas son iguales hasta los primeros %zu
-		caracteres.\n", n);
-    else if (response < 0)
-        printf("La cadena 1 es menor que la cadena 2.\n");
-    else
-        printf("La cadena 1 es mayor que la cadena 2.\n");
-
-    return 0;
-} */

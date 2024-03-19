@@ -6,7 +6,7 @@
 /*   By: crizapat <crizapat@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/14 14:37:19 by crizapat          #+#    #+#             */
-/*   Updated: 2024/03/17 23:37:06 by crizapat         ###   ########.fr       */
+/*   Updated: 2024/03/20 00:43:12 by crizapat         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -214,7 +214,6 @@ int					ft_atoi(const char *str);
 void				*ft_calloc(size_t count, size_t size);
 
 /**
- * strdup
  * Reserva memoria con malloc y copia una cadena en ella
  * @param str cadena a copiar
  * @return puntero a la cadena copiada

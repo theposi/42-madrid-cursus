@@ -6,7 +6,7 @@
 /*   By: crizapat <crizapat@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/18 12:41:47 by crizapat          #+#    #+#             */
-/*   Updated: 2024/01/20 17:23:54 by crizapat         ###   ########.fr       */
+/*   Updated: 2024/03/20 00:53:00 by crizapat         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -37,19 +37,4 @@ void	*ft_memmove(void *dst, const void *src, size_t len)
 		}
 	}
 	return (dst);
-}
-
-int main(void)
-{
-    char src[] = "Hola Marventis!";
-    char dest[20];
-    int i = 6;
-
-    printf("Antes de ft_memmove: \"%s\"\n", dest);
-
-    ft_memmove(dest, src, i);
-
-    printf("Después de ft_memmove: \"%s\"\n", dest);
-
-    return (0);
 }

@@ -6,7 +6,7 @@
 /*   By: crizapat <crizapat@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/14 14:54:42 by crizapat          #+#    #+#             */
-/*   Updated: 2024/01/29 14:13:20 by crizapat         ###   ########.fr       */
+/*   Updated: 2024/03/20 00:52:03 by crizapat         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,10 +18,3 @@ int	ft_isprint(int print)
 		return (1);
 	return (0);
 }
-
-/*int	main(void)
-{
-	int	print = ft_isprint(32);
-	printf("%d\n", print);
-	return (0);
-}*/

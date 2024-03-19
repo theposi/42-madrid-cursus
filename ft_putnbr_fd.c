@@ -6,7 +6,7 @@
 /*   By: crizapat <crizapat@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/12 12:04:15 by crizapat          #+#    #+#             */
-/*   Updated: 2024/03/12 12:40:31 by crizapat         ###   ########.fr       */
+/*   Updated: 2024/03/20 00:54:14 by crizapat         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,9 +35,3 @@ void	ft_putnbr_fd(int num, int fd)
 		ft_putchar_fd(number + '0', fd);
 	}
 }
-
-/* int main()
-{
-	ft_putnbr_fd(0, 1);
-	return (0);
-} */

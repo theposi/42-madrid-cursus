@@ -4,155 +4,155 @@
 void ft_isalpha_tester()
 {
 	printf("ft_isalpha_tester\n");
-	printf("ft_isalpha('a') = %d %s\n",ft_isalpha('a') , ft_isalpha('a') == 1 ? "✅" : "❌");
-	printf("ft_isalpha('A') = %d %s\n",ft_isalpha('A') , ft_isalpha('A') == 1 ? "✅" : "❌");
-	printf("ft_isalpha('z') = %d %s\n",ft_isalpha('z') , ft_isalpha('z') == 1 ? "✅" : "❌");
-	printf("ft_isalpha('Z') = %d %s\n",ft_isalpha('Z') , ft_isalpha('Z') == 1 ? "✅" : "❌");
-	printf("ft_isalpha('1') = %d %s\n",ft_isalpha('1') , ft_isalpha('1') == 0 ? "✅" : "❌");
-	printf("ft_isalpha('0') = %d %s\n",ft_isalpha('0') , ft_isalpha('0') == 0 ? "✅" : "❌");
-	printf("ft_isalpha(' ') = %d %s\n",ft_isalpha(' ') , ft_isalpha(' ') == 0 ? "✅" : "❌");
-	printf("ft_isalpha('!') = %d %s\n",ft_isalpha('!') , ft_isalpha('!') == 0 ? "✅" : "❌");
-	printf("ft_isalpha('[') = %d %s\n",ft_isalpha('[') , ft_isalpha('[') == 0 ? "✅" : "❌");
-	printf("ft_isalpha(']') = %d %s\n",ft_isalpha(']') , ft_isalpha(']') == 0 ? "✅" : "❌");
-	printf("ft_isalpha(365) = %d %s\n",ft_isalpha(365) , ft_isalpha(365) == 0 ? "✅" : "❌");
-	printf("ft_isalpha(0) = %d %s\n",ft_isalpha(0) , ft_isalpha(0) == 0 ? "✅" : "❌");
+	printf("ft_isalpha('a') = %d %s\n",ft_isalpha('a'));
+	printf("ft_isalpha('A') = %d %s\n",ft_isalpha('A'));
+	printf("ft_isalpha('z') = %d %s\n",ft_isalpha('z'));
+	printf("ft_isalpha('Z') = %d %s\n",ft_isalpha('Z'));
+	printf("ft_isalpha('1') = %d %s\n",ft_isalpha('1'));
+	printf("ft_isalpha('0') = %d %s\n",ft_isalpha('0'));
+	printf("ft_isalpha(' ') = %d %s\n",ft_isalpha(' '));
+	printf("ft_isalpha('!') = %d %s\n",ft_isalpha('!'));
+	printf("ft_isalpha('[') = %d %s\n",ft_isalpha('['));
+	printf("ft_isalpha(']') = %d %s\n",ft_isalpha(']'));
+	printf("ft_isalpha(365) = %d %s\n",ft_isalpha(365));
+	printf("ft_isalpha(0) = %d %s\n",ft_isalpha(0));
 }
 
 void ft_isdigit_tester()
 {
 	printf("ft_isdigit_tester\n");
-	printf("ft_isdigit('a') = %d %s\n",ft_isdigit('a') , ft_isdigit('a') == 0 ? "✅" : "❌");
-	printf("ft_isdigit('A') = %d %s\n",ft_isdigit('A') , ft_isdigit('A') == 0 ? "✅" : "❌");
-	printf("ft_isdigit('z') = %d %s\n",ft_isdigit('z') , ft_isdigit('z') == 0 ? "✅" : "❌");
-	printf("ft_isdigit('Z') = %d %s\n",ft_isdigit('Z') , ft_isdigit('Z') == 0 ? "✅" : "❌");
-	printf("ft_isdigit('1') = %d %s\n",ft_isdigit('1') , ft_isdigit('1') == 1 ? "✅" : "❌");
-	printf("ft_isdigit('0') = %d %s\n",ft_isdigit('0') , ft_isdigit('0') == 1 ? "✅" : "❌");
-	printf("ft_isdigit('8') = %d %s\n",ft_isdigit('8') , ft_isdigit('8') == 1 ? "✅" : "❌");
-	printf("ft_isdigit(' ') = %d %s\n",ft_isdigit(' ') , ft_isdigit(' ') == 0 ? "✅" : "❌");
-	printf("ft_isdigit('!') = %d %s\n",ft_isdigit('!') , ft_isdigit('!') == 0 ? "✅" : "❌");
-	printf("ft_isdigit('[') = %d %s\n",ft_isdigit('[') , ft_isdigit('[') == 0 ? "✅" : "❌");
-	printf("ft_isdigit(']') = %d %s\n",ft_isdigit(']') , ft_isdigit(']') == 0 ? "✅" : "❌");
-	printf("ft_isdigit(365) = %d %s\n",ft_isdigit(365) , ft_isdigit(365) == 0 ? "✅" : "❌");
-	printf("ft_isdigit(0) = %d %s\n",ft_isdigit(0) , ft_isdigit(0) == 0 ? "✅" : "❌");
+	printf("ft_isdigit('a') = %d %s\n",ft_isdigit('a'));
+	printf("ft_isdigit('A') = %d %s\n",ft_isdigit('A'));
+	printf("ft_isdigit('z') = %d %s\n",ft_isdigit('z'));
+	printf("ft_isdigit('Z') = %d %s\n",ft_isdigit('Z'));
+	printf("ft_isdigit('1') = %d %s\n",ft_isdigit('1'));
+	printf("ft_isdigit('0') = %d %s\n",ft_isdigit('0'));
+	printf("ft_isdigit('8') = %d %s\n",ft_isdigit('8'));
+	printf("ft_isdigit(' ') = %d %s\n",ft_isdigit(' '));
+	printf("ft_isdigit('!') = %d %s\n",ft_isdigit('!'));
+	printf("ft_isdigit('[') = %d %s\n",ft_isdigit('['));
+	printf("ft_isdigit(']') = %d %s\n",ft_isdigit(']'));
+	printf("ft_isdigit(365) = %d %s\n",ft_isdigit(365));
+	printf("ft_isdigit(0) = %d %s\n",ft_isdigit(0));
 }
 
 void ft_isalnum_tester()
 {
 	printf("ft_isalnum_tester\n");
-	printf("ft_isalnum('a') = %d %s\n",ft_isalnum('a') , ft_isalnum('a') == 1 ? "✅" : "❌");
-	printf("ft_isalnum('A') = %d %s\n",ft_isalnum('A') , ft_isalnum('A') == 1 ? "✅" : "❌");
-	printf("ft_isalnum('z') = %d %s\n",ft_isalnum('z') , ft_isalnum('z') == 1 ? "✅" : "❌");
-	printf("ft_isalnum('Z') = %d %s\n",ft_isalnum('Z') , ft_isalnum('Z') == 1 ? "✅" : "❌");
-	printf("ft_isalnum('1') = %d %s\n",ft_isalnum('1') , ft_isalnum('1') == 1 ? "✅" : "❌");
-	printf("ft_isalnum('0') = %d %s\n",ft_isalnum('0') , ft_isalnum('0') == 1 ? "✅" : "❌");
-	printf("ft_isalnum('8') = %d %s\n",ft_isalnum('8') , ft_isalnum('8') == 1 ? "✅" : "❌");
-	printf("ft_isalnum(' ') = %d %s\n",ft_isalnum(' ') , ft_isalnum(' ') == 0 ? "✅" : "❌");
-	printf("ft_isalnum('!') = %d %s\n",ft_isalnum('!') , ft_isalnum('!') == 0 ? "✅" : "❌");
-	printf("ft_isalnum('[') = %d %s\n",ft_isalnum('[') , ft_isalnum('[') == 0 ? "✅" : "❌");
-	printf("ft_isalnum(']') = %d %s\n",ft_isalnum(']') , ft_isalnum(']') == 0 ? "✅" : "❌");
-	printf("ft_isalnum(365) = %d %s\n",ft_isalnum(365) , ft_isalnum(365) == 0 ? "✅" : "❌");
-	printf("ft_isalnum(0) = %d %s\n",ft_isalnum(0) , ft_isalnum(0) == 0 ? "✅" : "❌");
+	printf("ft_isalnum('a') = %d %s\n",ft_isalnum('a'));
+	printf("ft_isalnum('A') = %d %s\n",ft_isalnum('A'));
+	printf("ft_isalnum('z') = %d %s\n",ft_isalnum('z'));
+	printf("ft_isalnum('Z') = %d %s\n",ft_isalnum('Z'));
+	printf("ft_isalnum('1') = %d %s\n",ft_isalnum('1'));
+	printf("ft_isalnum('0') = %d %s\n",ft_isalnum('0'));
+	printf("ft_isalnum('8') = %d %s\n",ft_isalnum('8'));
+	printf("ft_isalnum(' ') = %d %s\n",ft_isalnum(' '));
+	printf("ft_isalnum('!') = %d %s\n",ft_isalnum('!'));
+	printf("ft_isalnum('[') = %d %s\n",ft_isalnum('['));
+	printf("ft_isalnum(']') = %d %s\n",ft_isalnum(']'));
+	printf("ft_isalnum(365) = %d %s\n",ft_isalnum(365));
+	printf("ft_isalnum(0) = %d %s\n",ft_isalnum(0));
 }
 
 void ft_isascii_tester()
 {
 	printf("ft_isascii_tester\n");
-	printf("ft_isascii('a') = %d %s\n",ft_isascii('a') , ft_isascii('a') == 1 ? "✅" : "❌");
-	printf("ft_isascii('A') = %d %s\n",ft_isascii('A') , ft_isascii('A') == 1 ? "✅" : "❌");
-	printf("ft_isascii('z') = %d %s\n",ft_isascii('z') , ft_isascii('z') == 1 ? "✅" : "❌");
-	printf("ft_isascii('Z') = %d %s\n",ft_isascii('Z') , ft_isascii('Z') == 1 ? "✅" : "❌");
-	printf("ft_isascii('1') = %d %s\n",ft_isascii('1') , ft_isascii('1') == 1 ? "✅" : "❌");
-	printf("ft_isascii('0') = %d %s\n",ft_isascii('0') , ft_isascii('0') == 1 ? "✅" : "❌");
-	printf("ft_isascii('8') = %d %s\n",ft_isascii('8') , ft_isascii('8') == 1 ? "✅" : "❌");
-	printf("ft_isascii(' ') = %d %s\n",ft_isascii(' ') , ft_isascii(' ') == 1 ? "✅" : "❌");
-	printf("ft_isascii('!') = %d %s\n",ft_isascii('!') , ft_isascii('!') == 1 ? "✅" : "❌");
-	printf("ft_isascii('[') = %d %s\n",ft_isascii('[') , ft_isascii('[') == 1 ? "✅" : "❌");
-	printf("ft_isascii(']') = %d %s\n",ft_isascii(']') , ft_isascii(']') == 1 ? "✅" : "❌");
-	printf("ft_isascii(365) = %d %s\n",ft_isascii(365) , ft_isascii(365) == 0 ? "✅" : "❌");
-	printf("ft_isascii(0) = %d %s\n",ft_isascii(0) , ft_isascii(0) == 1 ? "✅" : "❌");
+	printf("ft_isascii('a') = %d %s\n",ft_isascii('a'))
+	printf("ft_isascii('A') = %d %s\n",ft_isascii('A'))
+	printf("ft_isascii('z') = %d %s\n",ft_isascii('z'))
+	printf("ft_isascii('Z') = %d %s\n",ft_isascii('Z'))
+	printf("ft_isascii('1') = %d %s\n",ft_isascii('1'))
+	printf("ft_isascii('0') = %d %s\n",ft_isascii('0'))
+	printf("ft_isascii('8') = %d %s\n",ft_isascii('8'))
+	printf("ft_isascii(' ') = %d %s\n",ft_isascii(' '))
+	printf("ft_isascii('!') = %d %s\n",ft_isascii('!'))
+	printf("ft_isascii('[') = %d %s\n",ft_isascii('['))
+	printf("ft_isascii(']') = %d %s\n",ft_isascii(']'))
+	printf("ft_isascii(365) = %d %s\n",ft_isascii(365))
+	printf("ft_isascii(0) = %d %s\n",ft_isascii(0));
 }
 
 void ft_isprint_tester()
 {
 	printf("ft_isprint_tester\n");
-	printf("ft_isprint('a') = %d %s\n",ft_isprint('a') , ft_isprint('a') == 1 ? "✅" : "❌");
-	printf("ft_isprint('A') = %d %s\n",ft_isprint('A') , ft_isprint('A') == 1 ? "✅" : "❌");
-	printf("ft_isprint('z') = %d %s\n",ft_isprint('z') , ft_isprint('z') == 1 ? "✅" : "❌");
-	printf("ft_isprint('Z') = %d %s\n",ft_isprint('Z') , ft_isprint('Z') == 1 ? "✅" : "❌");
-	printf("ft_isprint('1') = %d %s\n",ft_isprint('1') , ft_isprint('1') == 1 ? "✅" : "❌");
-	printf("ft_isprint('0') = %d %s\n",ft_isprint('0') , ft_isprint('0') == 1 ? "✅" : "❌");
-	printf("ft_isprint('8') = %d %s\n",ft_isprint('8') , ft_isprint('8') == 1 ? "✅" : "❌");
-	printf("ft_isprint(' ') = %d %s\n",ft_isprint(' ') , ft_isprint(' ') == 1 ? "✅" : "❌");
-	printf("ft_isprint('!') = %d %s\n",ft_isprint('!') , ft_isprint('!') == 1 ? "✅" : "❌");
-	printf("ft_isprint('[') = %d %s\n",ft_isprint('[') , ft_isprint('[') == 1 ? "✅" : "❌");
-	printf("ft_isprint(']') = %d %s\n",ft_isprint(']') , ft_isprint(']') == 1 ? "✅" : "❌");
-	printf("ft_isprint(365) = %d %s\n",ft_isprint(365) , ft_isprint(365) == 0 ? "✅" : "❌");
-	printf("ft_isprint(0) = %d %s\n",ft_isprint(0) , ft_isprint(0) == 0 ? "✅" : "❌");
+	printf("ft_isprint('a') = %d %s\n",ft_isprint('a'));
+	printf("ft_isprint('A') = %d %s\n",ft_isprint('A'));
+	printf("ft_isprint('z') = %d %s\n",ft_isprint('z'));
+	printf("ft_isprint('Z') = %d %s\n",ft_isprint('Z'));
+	printf("ft_isprint('1') = %d %s\n",ft_isprint('1'));
+	printf("ft_isprint('0') = %d %s\n",ft_isprint('0'));
+	printf("ft_isprint('8') = %d %s\n",ft_isprint('8'));
+	printf("ft_isprint(' ') = %d %s\n",ft_isprint(' '));
+	printf("ft_isprint('!') = %d %s\n",ft_isprint('!'));
+	printf("ft_isprint('[') = %d %s\n",ft_isprint('['));
+	printf("ft_isprint(']') = %d %s\n",ft_isprint(']'));
+	printf("ft_isprint(365) = %d %s\n",ft_isprint(365));
+	printf("ft_isprint(0) = %d %s\n",ft_isprint(0));
 }
 
 void ft_strlen_tester()
 {
 	printf("ft_strlen_tester\n");
-	printf("ft_strlen('') = %zu %s\n",ft_strlen("") , ft_strlen("") == 0 ? "✅" : "❌");
-	printf("ft_strlen('a') = %zu %s\n",ft_strlen("a") , ft_strlen("a") == 1 ? "✅" : "❌");
-	printf("ft_strlen('ab') = %zu %s\n",ft_strlen("ab") , ft_strlen("ab") == 2 ? "✅" : "❌");
-	printf("ft_strlen('abc') = %zu %s\n",ft_strlen("abc") , ft_strlen("abc") == 3 ? "✅" : "❌");
-	printf("ft_strlen('abcd') = %zu %s\n",ft_strlen("abcd") , ft_strlen("abcd") == 4 ? "✅" : "❌");
-	printf("ft_strlen('abcde') = %zu %s\n",ft_strlen("abcde") , ft_strlen("abcde") == 5 ? "✅" : "❌");
-	printf("ft_strlen('abcdef') = %zu %s\n",ft_strlen("abcdef") , ft_strlen("abcdef") == 6 ? "✅" : "❌");
-	printf("ft_strlen('abcdefg') = %zu %s\n",ft_strlen("abcdefg") , ft_strlen("abcdefg") == 7 ? "✅" : "❌");
-	printf("ft_strlen('abcdefgh') = %zu %s\n",ft_strlen("abcdefgh") , ft_strlen("abcdefgh") == 8 ? "✅" : "❌");
-	printf("ft_strlen('abcdefghi') = %zu %s\n",ft_strlen("abcdefghi") , ft_strlen("abcdefghi") == 9 ? "✅" : "❌");
-	printf("ft_strlen('abcdefghij') = %zu %s\n",ft_strlen("abcdefghij") , ft_strlen("abcdefghij") == 10 ? "✅" : "❌");
-	printf("ft_strlen('abcdefghijk') = %zu %s\n",ft_strlen("abcdefghijk") , ft_strlen("abcdefghijk") == 11 ? "✅" : "❌");
-	printf("ft_strlen('Hola mundo') = %zu %s\n",ft_strlen("Hola mundo") , ft_strlen("Hola mundo") == 10 ? "✅" : "❌");
+	printf("ft_strlen('') = %zu %s\n",ft_strlen(""));
+	printf("ft_strlen('a') = %zu %s\n",ft_strlen("a"));
+	printf("ft_strlen('ab') = %zu %s\n",ft_strlen("ab"));
+	printf("ft_strlen('abc') = %zu %s\n",ft_strlen("abc"));
+	printf("ft_strlen('abcd') = %zu %s\n",ft_strlen("abcd"));
+	printf("ft_strlen('abcde') = %zu %s\n",ft_strlen("abcde"));
+	printf("ft_strlen('abcdef') = %zu %s\n",ft_strlen("abcdef"));
+	printf("ft_strlen('abcdefg') = %zu %s\n",ft_strlen("abcdefg"));
+	printf("ft_strlen('abcdefgh') = %zu %s\n",ft_strlen("abcdefgh"));
+	printf("ft_strlen('abcdefghi') = %zu %s\n",ft_strlen("abcdefghi"));
+	printf("ft_strlen('abcdefghij') = %zu %s\n",ft_strlen("abcdefghij"));
+	printf("ft_strlen('abcdefghijk') = %zu %s\n",ft_strlen("abcdefghijk"));
+	printf("ft_strlen('Hola mundo') = %zu %s\n",ft_strlen("Hola mundo"));
 }
 
 void ft_toupper_tester()
 {
 	printf("ft_toupper_tester\n");
-	printf("ft_toupper('a') = %d %s\n",ft_toupper('a') , ft_toupper('a') == 'A' ? "✅" : "❌");
-	printf("ft_toupper('A') = %d %s\n",ft_toupper('A') , ft_toupper('A') == 'A' ? "✅" : "❌");
-	printf("ft_toupper('z') = %d %s\n",ft_toupper('z') , ft_toupper('z') == 'Z' ? "✅" : "❌");
-	printf("ft_toupper('Z') = %d %s\n",ft_toupper('Z') , ft_toupper('Z') == 'Z' ? "✅" : "❌");
-	printf("ft_toupper('1') = %d %s\n",ft_toupper('1') , ft_toupper('1') == '1' ? "✅" : "❌");
-	printf("ft_toupper('0') = %d %s\n",ft_toupper('0') , ft_toupper('0') == '0' ? "✅" : "❌");
-	printf("ft_toupper('8') = %d %s\n",ft_toupper('8') , ft_toupper('8') == '8' ? "✅" : "❌");
-	printf("ft_toupper(' ') = %d %s\n",ft_toupper(' ') , ft_toupper(' ') == ' ' ? "✅" : "❌");
-	printf("ft_toupper('!') = %d %s\n",ft_toupper('!') , ft_toupper('!') == '!' ? "✅" : "❌");
-	printf("ft_toupper('[') = %d %s\n",ft_toupper('[') , ft_toupper('[') == '[' ? "✅" : "❌");
-	printf("ft_toupper(']') = %d %s\n",ft_toupper(']') , ft_toupper(']') == ']' ? "✅" : "❌");
+	printf("ft_toupper('a') = %d %s\n",ft_toupper('a'));
+	printf("ft_toupper('A') = %d %s\n",ft_toupper('A'));
+	printf("ft_toupper('z') = %d %s\n",ft_toupper('z'));
+	printf("ft_toupper('Z') = %d %s\n",ft_toupper('Z'));
+	printf("ft_toupper('1') = %d %s\n",ft_toupper('1'));
+	printf("ft_toupper('0') = %d %s\n",ft_toupper('0'));
+	printf("ft_toupper('8') = %d %s\n",ft_toupper('8'));
+	printf("ft_toupper(' ') = %d %s\n",ft_toupper(' '));
+	printf("ft_toupper('!') = %d %s\n",ft_toupper('!'));
+	printf("ft_toupper('[') = %d %s\n",ft_toupper('['));
+	printf("ft_toupper(']') = %d %s\n",ft_toupper(']'));
 }
 
 void ft_tolower_tester()
 {
 	printf("ft_tolower_tester\n");
-	printf("ft_tolower('a') = %d %s\n",ft_tolower('a') , ft_tolower('a') == 'a' ? "✅" : "❌");
-	printf("ft_tolower('A') = %d %s\n",ft_tolower('A') , ft_tolower('A') == 'a' ? "✅" : "❌");
-	printf("ft_tolower('z') = %d %s\n",ft_tolower('z') , ft_tolower('z') == 'z' ? "✅" : "❌");
-	printf("ft_tolower('Z') = %d %s\n",ft_tolower('Z') , ft_tolower('Z') == 'z' ? "✅" : "❌");
-	printf("ft_tolower('1') = %d %s\n",ft_tolower('1') , ft_tolower('1') == '1' ? "✅" : "❌");
-	printf("ft_tolower('0') = %d %s\n",ft_tolower('0') , ft_tolower('0') == '0' ? "✅" : "❌");
-	printf("ft_tolower('8') = %d %s\n",ft_tolower('8') , ft_tolower('8') == '8' ? "✅" : "❌");
-	printf("ft_tolower(' ') = %d %s\n",ft_tolower(' ') , ft_tolower(' ') == ' ' ? "✅" : "❌");
-	printf("ft_tolower('!') = %d %s\n",ft_tolower('!') , ft_tolower('!') == '!' ? "✅" : "❌");
-	printf("ft_tolower('[') = %d %s\n",ft_tolower('[') , ft_tolower('[') == '[' ? "✅" : "❌");
-	printf("ft_tolower(']') = %d %s\n",ft_tolower(']') , ft_tolower(']') == ']' ? "✅" : "❌");
-	printf("ft_tolower(365) = %d %s\n",ft_tolower(365) , ft_tolower(365) == 365 ? "✅" : "❌");
-	printf("ft_tolower(0) = %d %s\n",ft_tolower(0) , ft_tolower(0) == 0 ? "✅" : "❌");
+	printf("ft_tolower('a') = %d %s\n",ft_tolower('a'));
+	printf("ft_tolower('A') = %d %s\n",ft_tolower('A'));
+	printf("ft_tolower('z') = %d %s\n",ft_tolower('z'));
+	printf("ft_tolower('Z') = %d %s\n",ft_tolower('Z'));
+	printf("ft_tolower('1') = %d %s\n",ft_tolower('1'));
+	printf("ft_tolower('0') = %d %s\n",ft_tolower('0'));
+	printf("ft_tolower('8') = %d %s\n",ft_tolower('8'));
+	printf("ft_tolower(' ') = %d %s\n",ft_tolower(' '));
+	printf("ft_tolower('!') = %d %s\n",ft_tolower('!'));
+	printf("ft_tolower('[') = %d %s\n",ft_tolower('['));
+	printf("ft_tolower(']') = %d %s\n",ft_tolower(']'));
+	printf("ft_tolower(365) = %d %s\n",ft_tolower(365));
+	printf("ft_tolower(0) = %d %s\n",ft_tolower(0));
 }
 
 void ft_strncmp_tester()
 {
 	printf("ft_strncmp_tester\n");
-	printf("ft_strncmp('abc', 'abc', 3) = %d %s\n", ft_strncmp("abc", "abc", 3), ft_strncmp("abc", "abc", 3) == 0 ? "✅" : "❌");
-	printf("ft_strncmp('abc', 'abd', 3) = %d %s\n", ft_strncmp("abc", "abd", 3), ft_strncmp("abc", "abd", 3) < 0 ? "✅" : "❌");
-	printf("ft_strncmp('abc', 'ab', 3) = %d %s\n", ft_strncmp("abc", "ab", 3), ft_strncmp("abc", "ab", 3) > 0 ? "✅" : "❌");
-	printf("ft_strncmp('abc', 'abcd', 3) = %d %s\n", ft_strncmp("abc", "abcd", 3), ft_strncmp("abc", "abcd", 3) == 0 ? "✅" : "❌");
-	printf("ft_strncmp('abc', 'abc', 2) = %d %s\n", ft_strncmp("abc", "abc", 2), ft_strncmp("abc", "abc", 2) == 0 ? "✅" : "❌");
-	printf("ft_strncmp('abc', 'abd', 2) = %d %s\n", ft_strncmp("abc", "abd", 2), ft_strncmp("abc", "abd", 2) == 0 ? "✅" : "❌");
-	printf("ft_strncmp('abc', 'ab', 2) = %d %s\n", ft_strncmp("abc", "ab", 2), ft_strncmp("abc", "ab", 2) == 0 ? "✅" : "❌");
-	printf("ft_strncmp('abc', 'abcd', 2) = %d %s\n", ft_strncmp("abc", "abcd", 2), ft_strncmp("abc", "abcd", 2) == 0 ? "✅" : "❌");
+	printf("ft_strncmp('abc', 'abc', 3) = %d %s\n", ft_strncmp("abc", "abc", 3), ft_strncmp("abc", "abc", 3));
+	printf("ft_strncmp('abc', 'abd', 3) = %d %s\n", ft_strncmp("abc", "abd", 3), ft_strncmp("abc", "abd", 3));
+	printf("ft_strncmp('abc', 'ab', 3) = %d %s\n", ft_strncmp("abc", "ab", 3), ft_strncmp("abc", "ab", 3));
+	printf("ft_strncmp('abc', 'abcd', 3) = %d %s\n", ft_strncmp("abc", "abcd", 3), ft_strncmp("abc", "abcd", 3));
+	printf("ft_strncmp('abc', 'abc', 2) = %d %s\n", ft_strncmp("abc", "abc", 2), ft_strncmp("abc", "abc", 2));
+	printf("ft_strncmp('abc', 'abd', 2) = %d %s\n", ft_strncmp("abc", "abd", 2), ft_strncmp("abc", "abd", 2));
+	printf("ft_strncmp('abc', 'ab', 2) = %d %s\n", ft_strncmp("abc", "ab", 2), ft_strncmp("abc", "ab", 2));
+	printf("ft_strncmp('abc', 'abcd', 2) = %d %s\n", ft_strncmp("abc", "abcd", 2), ft_strncmp("abc", "abcd", 2));
 }
 
 
@@ -218,7 +218,7 @@ void ft_bzero_tester()
 	printf("Antes de ft_bzero: %s\n", str);
 	
 	ft_bzero(str, 5);
-	printf("Después de ft_bzero: %s\n", str); // No se imprime nada porque el primer caracter es nulo
+	printf("Después de ft_bzero: %s\n", str);
 }
 
 void ft_memchr_tester()

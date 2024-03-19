@@ -6,7 +6,7 @@
 /*   By: crizapat <crizapat@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/07 13:13:04 by crizapat          #+#    #+#             */
-/*   Updated: 2024/03/08 15:20:03 by crizapat         ###   ########.fr       */
+/*   Updated: 2024/03/20 00:52:14 by crizapat         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -58,13 +58,3 @@ char	*ft_itoa(int num)
 	}
 	return (str);
 }
-
-/* int	main(void)
-{
-	int n = 2147483647;
-	char *response = ft_itoa(n);
-	free(*response);
-	printf("El caracter que se trasformó es: %s\n", response);
-	return (0);
-}
- */

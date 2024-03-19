@@ -6,12 +6,9 @@
 /*   By: crizapat <crizapat@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/22 12:33:41 by crizapat          #+#    #+#             */
-/*   Updated: 2024/02/27 11:17:09 by crizapat         ###   ########.fr       */
+/*   Updated: 2024/03/20 00:50:30 by crizapat         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-
-/* Busca la primera ocurrencia de un carácter específico en una cadena de
-caracteres y devuelve un puntero a esa ubicación. */
 
 #include "libft.h"
 
@@ -25,15 +22,3 @@ char	*ft_strchr(const char *str, int charac)
 	}
 	return ((char *)str);
 }
-/* int	main()
-{
-	const char *str = "Hola Mundo, mi gente buenaaas";
-	int charToFind = 'a';
-
-	char *result = ft_strchr(str, charToFind);
-
-	printf("El carácter '%c' se encuentra en la posición:
-	%s\n", charToFind, result);
-	
-	return (0);
-} */

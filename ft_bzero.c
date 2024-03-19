@@ -6,7 +6,7 @@
 /*   By: crizapat <crizapat@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/16 13:54:02 by crizapat          #+#    #+#             */
-/*   Updated: 2024/01/18 11:08:59 by crizapat         ###   ########.fr       */
+/*   Updated: 2024/03/20 00:51:14 by crizapat         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,12 +25,3 @@ void	ft_bzero(void *ptr, size_t len)
 		i++;
 	}
 }
-
-/* int	main(void)
-{
-	char str[50] = "Hola Mundo!";
-	printf("Antes del ft_bzero: \"%s\"\n", str);
-	ft_bzero(str, 4);
-	printf("Después del ft_bzero: \"%s\"\n", str);
-	return (0);
-} */

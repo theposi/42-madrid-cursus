@@ -6,7 +6,7 @@
 /*   By: crizapat <crizapat@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/27 08:41:12 by crizapat          #+#    #+#             */
-/*   Updated: 2024/02/27 10:05:33 by crizapat         ###   ########.fr       */
+/*   Updated: 2024/03/20 00:50:09 by crizapat         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -39,25 +39,3 @@ char	*ft_strjoin(char const *s1, char const *s2)
 	newstr[i] = '\0';
 	return (newstr);
 }
-
-/* int main()
-{
-	const char str1[] ="Hola ";
-	const char str2[] ="Mundo!";
-	char *newstr;
-
-	printf("Cadena 1: %s\n", str1);
-	printf("Cadena 2: %s\n", str2);
-
-	newstr = ft_strjoin(str1, str2);
-
-	if (!newstr)
-	{
-		printf("Hubo algún error a la hora unir las cadenas.\n");
-		return (1);
-	}
-	
-	printf("Nueva cadena combinando ambas: %s\n", newstr);
-	free(newstr);
-	return (0);
-} */
