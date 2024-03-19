@@ -63,6 +63,7 @@ char	*ft_itoa(int num)
 {
 	int n = 2147483647;
 	char *response = ft_itoa(n);
+	free(*response);
 	printf("El caracter que se trasformó es: %s\n", response);
 	return (0);
 }

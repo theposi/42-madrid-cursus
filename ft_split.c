@@ -12,7 +12,7 @@
 
 #include "libft.h"
 
-static size_t	words_counter(const char *str, char c)
+static size_t	words_counter(const char *str, char charac)
 {
 	size_t	i;
 	size_t	words_to_save;
@@ -21,12 +21,12 @@ static size_t	words_counter(const char *str, char c)
 	words_to_save = 0;
 	while (str[i] != '\0')
 	{
-		while (str[i] == c)
+		while (str[i] == charac)
 			i++;
-		while (str[i] != c && str[i] != '\0')
+		while (str[i] != charac && str[i] != '\0')
 		{
 			i++;
-			if (str[i] == c || str[i] == '\0')
+			if (str[i] == charac || str[i] == '\0')
 				words_to_save++;
 		}
 	}

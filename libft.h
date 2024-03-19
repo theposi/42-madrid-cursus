@@ -68,7 +68,7 @@ size_t				ft_strlen(const char *str);
 
 /**
  * Establece los primeros len bytes del área de memoria
- * apuntada por ptr al valor chr.
+ * apuntada por ptr al valor charac.
  * @param ptr Puntero al área de memoria a establecer.
  * @param charac Valor a establecer.
  * @param len Número de bytes a establecer.
