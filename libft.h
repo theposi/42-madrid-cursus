@@ -207,11 +207,11 @@ int					ft_atoi(const char *str);
 
 /**
  * Reserva memoria con malloc y la inicializa a 0
- * @param count numero de elementos
+ * @param items numero de elementos
  * @param size tamaño de cada elemento
  * @return puntero a la memoria reservada
  */
-void				*ft_calloc(size_t count, size_t size);
+void				*ft_calloc(size_t items, size_t size);
 
 /**
  * Reserva memoria con malloc y copia una cadena en ella
@@ -253,7 +253,7 @@ char				*ft_strjoin(char const *s1, char const *s2);
  * @param set Caracteres a recortar
  * @return String resultante se devuelve con una reserva de malloc(3)
  */
-char				*ft_strtrim(const char *str, const char *set);
+char				*ft_strtrim(char const *str, char const *set);
 
 /**
  * Reserva (con malloc(3)) y devuelve un array de strings

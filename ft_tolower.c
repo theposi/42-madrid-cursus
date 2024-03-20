@@ -18,10 +18,3 @@ int	ft_tolower(int charac)
 		return (charac + 32);
 	return (charac);
 }
-
-/* int main()
-{
-	int letter = ft_tolower('D');
-	printf("%c\n", letter);
-	return (0);
-} */

@@ -18,10 +18,3 @@ int	ft_toupper(int charac)
 		return (charac - 32);
 	return (charac);
 }
-
-/* int	main()
-{
-	int letter = ft_toupper('h');
-	printf("%c\n", letter);
-	return (0);
-} */

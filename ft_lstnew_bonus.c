@@ -23,15 +23,3 @@ t_list	*ft_lstnew(void *content)
 	new_list->next = NULL;
 	return (new_list);
 }
-
-/* int main()
-{
-	char *content = "Totoro";
-	t_list *response = ft_lstnew(content);
-	if (response != NULL)
-	{
-		printf("Soy la respuesta %s\n", (char *)(response->content));
-		free(response);
-	}
-	return (0);
-} */

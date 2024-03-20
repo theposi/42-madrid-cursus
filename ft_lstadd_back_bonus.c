@@ -26,24 +26,3 @@ void	ft_lstadd_back(t_list **lst, t_list *new)
 	last_node = ft_lstlast(*lst);
 	last_node->next = new;
 }
-
-/* int main()
-{
-	t_list	*lst;
-	t_list	*node_one = ft_lstnew("Nodo uno");
-	t_list	*node_two = ft_lstnew("Nodo dos");
-
-	lst = node_one;
-	ft_lstadd_front(&lst, node_two);
-
-	printf("Se usa el ft_lstadd_back \n");
-	ft_lstadd_back(&lst, ft_lstnew("Nodo creado en el add_back"));
-
-	while(lst != NULL)
-	{
-		printf("%s\n", (char *)lst->content);
-		if (lst->next == NULL)
-			return (0);
-		lst = lst->next;
-	}	
-} */

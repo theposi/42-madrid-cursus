@@ -34,19 +34,3 @@ char	*ft_substr(char const *s, unsigned int start, size_t len)
 	ft_strlcpy (new, s + start, end + 1);
 	return (new);
 }
-
-/* int main() {
-    char *str = "Hello, world!";
-    unsigned int start = 7;
-    size_t len = 5;
-
-    printf("Original: %s\n", str);
-
-    char *str = ft_substr(str, start, len);
-    if (str) {
-        printf("Substring: %s\n", str);
-    } else {
-        printf("Error al extraer el substring.\n");
-    }
-    return 0;
-} */

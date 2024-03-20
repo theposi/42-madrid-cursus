@@ -17,13 +17,3 @@ void	ft_putendl_fd(char *str, int fd)
 	ft_putstr_fd(str, fd);
 	write(fd, "\n", 1);
 }
-
-/* #include <fcntl.h>
-int main()
-{
-    char *str = "Hot Wheels";
-    int fd = open("test", O_RDWR);
-    ft_putendl_fd(str, fd);
-    close(fd);
-    return (0);
-} */

@@ -20,21 +20,3 @@ t_list	*ft_lstlast(t_list *lst)
 		lst = lst->next;
 	return (lst);
 }
-
-/* int main()
-{
-	t_list *lst;
-	t_list *node_one;
-
-	node_one = ft_lstnew("First node");
-
-	if (!node_one)
-	{
-		free(node_one);
-	}
-	lst = node_one;
-	t_list *last_node = ft_lstlast(lst);
-	printf("%s\n", (char *)last_node->content);
-	free(node_one);
-	return (0);
-} */

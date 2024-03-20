@@ -16,6 +16,8 @@ void	*ft_calloc(size_t items, size_t size)
 {
 	void	*ptr;
 
+	if (size != 0 && SIZE_MAX / size < items)
+		return (0);
 	ptr = malloc(items * size);
 	if (ptr == 0)
 		return (0);

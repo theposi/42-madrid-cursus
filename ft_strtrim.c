@@ -10,9 +10,6 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-/* Se utiliza para eliminar los caracteres especificados al principio
-y al final de una cadena. */
-
 #include "libft.h"
 
 char	*ft_strtrim(char const *str, char const *set)
@@ -34,18 +31,3 @@ char	*ft_strtrim(char const *str, char const *set)
 	newptr = ft_substr(str, i, (j + 1) - i);
 	return (newptr);
 }
-
-/* int	main()
-{
-	const char str[] = "1111Hola mundo soy zac11";
-	const char character[] = "1";
-	char *newchar = ft_strtrim(str, character);
-
-	if (newchar)
-	{
-		printf("Soy la cadena inicial: %s\n", str);
-		printf("Soy la cadena parceada: %s\n", newchar);
-	}
-
-	return (0);
-} */

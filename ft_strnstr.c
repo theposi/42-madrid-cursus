@@ -33,24 +33,3 @@ char	*ft_strnstr(const char *haystack, const char *needle, size_t len)
 	}
 	return (0);
 }
-
-/* int main()
-{
-	const char haystack[] = "Hola mi gente, espero estén excelente";
-	const char needle[] = "jaja Hola mi gente";
-	size_t len = 14;
-
-	char *result = ft_strnstr(haystack, needle, len);
-
-	if (result != NULL) {
-        printf("La subcadena '%s' fue encontrada en
-		'%s'.\n", needle, haystack);
-        printf("La subcadena comienza en la posición:
-		%ld\n", result - haystack);
-    } else {
-        printf("La subcadena '%s' no fue encontrada
-		en '%s'.\n", needle, haystack);
-    }
-
-    return 0;
-} */

@@ -27,14 +27,3 @@ char	*ft_strrchr(const char *str, int charac)
 	}
 	return (0);
 }
-
-/* int main ()
-{
-    char prueba[] = "Este es un texto de prueba, agregar letras";
-    char *ptr;
-    int    character = 'g';
-    
-    ptr = ft_strrchr(prueba, character);
-    printf ("La última aparición de la letra %c en '%s' es %s\n",
-	 character, prueba, ptr);
-} */

@@ -26,13 +26,3 @@ int	ft_lstsize(t_list *lst)
 	}
 	return (i);
 }
-
-/* int main()
-{
-	t_list *lst = ft_lstnew("nodo número uno");
-	ft_lstadd_front(&lst, ft_lstnew("nodo número dos"));
-	ft_lstadd_front(&lst, ft_lstnew("nodo número tres"));
-
-	printf("Tamaño de la lista: %d\n", ft_lstsize(lst));
-	return (0);
-} */
