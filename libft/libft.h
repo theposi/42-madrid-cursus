@@ -6,7 +6,7 @@
 /*   By: crizapat <crizapat@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/14 14:37:19 by crizapat          #+#    #+#             */
-/*   Updated: 2024/03/20 00:43:12 by crizapat         ###   ########.fr       */
+/*   Updated: 2024/03/26 14:26:37 by crizapat         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,6 +17,7 @@
 # include <stddef.h>
 # include <string.h>
 # include <stdlib.h>
+# include <stdint.h>
 
 typedef struct s_list
 {
