@@ -59,6 +59,8 @@ char	*ft_strjoin(char const *s1, char const *s2)
 
 char	*ft_strchr(const char *str, int charac)
 {
+	if (!str)
+		return (0);
 	while ((char) charac != *str)
 	{
 		if (!*str)

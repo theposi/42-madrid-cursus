@@ -21,6 +21,8 @@ static char* read_storage(int fd, char* rest_storage)
     bytes_to_read = 1;
     while(bytes_to_read > 0)
     {
+        if (ft_strchr(rest_storage, '\n'))
+            return (rest_storage);
         bytes_to_read = read(fd, buffer, BUFFER_SIZE);
         if (bytes_to_read < 0)
             return (NULL);
@@ -32,8 +34,6 @@ static char* read_storage(int fd, char* rest_storage)
         if (rest_storage == NULL)
             return (NULL);
         free(tmp);
-        if (ft_strchr(rest_storage, '\n'))
-            return (rest_storage);
     }
     return (rest_storage);
 }
@@ -54,10 +54,10 @@ static char* split_lines(char** rest_storage)
         *rest_storage = NULL;
         return (tmp);
     }
-    final_line = malloc(sizeof(char) * (position - *rest_storage + 1));
+    final_line = malloc(sizeof(char) * (position - *rest_storage + 2));
     if (!final_line)
         return (NULL);
-    ft_strlcpy(final_line, *rest_storage, position - *rest_storage + 1);
+    ft_strlcpy(final_line, *rest_storage, position - *rest_storage + 2);
     ++position;
     tmp = *rest_storage;
     *rest_storage = ft_strdup(position);
@@ -84,24 +84,5 @@ char* get_next_line(int fd)
     }
     free(rest_storage);
     rest_storage = NULL;
-    return (0);
-}
-
-int main()
-{
-    int     fd = open("HarryPotter.txt", O_RDONLY);
-    char*   line;
-
-    line = get_next_line(fd);
-    if (line == NULL)
-        printf("There was an error trying to read te document \n");
-    while (line)
-    {
-        printf("This is the line: %s\n", line);
-        free(line);
-        line = get_next_line(fd);
-    }
-    close(fd);
-    free(line);
     return (0);
 }
