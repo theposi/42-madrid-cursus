@@ -6,7 +6,7 @@
 /*   By: crizapat <crizapat@student.42madrid.com>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/17 11:55:12 by crizapat          #+#    #+#             */
-/*   Updated: 2024/04/30 14:28:24 by crizapat         ###   ########.fr       */
+/*   Updated: 2024/05/20 17:17:44 by crizapat         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,6 +31,6 @@ char	*ft_strjoin(char const *s1, char const *s2);
 char	*ft_strchr(const char *str, int charac);
 char	*ft_strdup(const char *str);
 size_t	ft_strlen(const char *str);
-char*   get_next_line(int fd);
+char	*get_next_line(int fd);
 
 #endif 
