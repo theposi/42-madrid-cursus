@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   get_next_line_bonus.c                              :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: crizapat <crizapat@student.42madrid.com>   +#+  +:+       +#+        */
+/*   By: crizapat <crizapat@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/17 11:55:19 by crizapat          #+#    #+#             */
-/*   Updated: 2024/05/27 11:05:34 by crizapat         ###   ########.fr       */
+/*   Updated: 2024/05/27 17:49:29 by crizapat         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,10 +25,11 @@
  */
 static char	*read_storage(int fd, char *rest_storage)
 {
-	char		buffer[BUFFER_SIZE + 1];
+	char		*buffer;
 	char		*tmp;
 	ssize_t		bytes_to_read;
 
+	buffer = malloc(BUFFER_SIZE + 1);
 	bytes_to_read = 1;
 	while (bytes_to_read > 0)
 	{
