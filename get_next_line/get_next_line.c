@@ -6,12 +6,23 @@
 /*   By: crizapat <crizapat@student.42madrid.com>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/17 11:55:19 by crizapat          #+#    #+#             */
-/*   Updated: 2024/05/20 17:29:49 by crizapat         ###   ########.fr       */
+/*   Updated: 2024/05/27 10:15:10 by crizapat         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "get_next_line.h"
 
+/**
+ * @name read_storage
+ * This function reads from a file descriptor into a buffer, appending the 
+ * content to a storage buffer until a newline character is found or the end 
+ * of the file is reached.
+ * @param fd The file descriptor to read from.
+ * @param rest_storage A pointer to the current storage buffer that holds 
+ *        the text of previous reads.
+ * @return The updated storage buffer with the newly read text appended. 
+ *         Returns NULL if an error occurs or if there is nothing to read.
+ */
 static char	*read_storage(int fd, char *rest_storage)
 {
 	char		buffer[BUFFER_SIZE + 1];
@@ -38,6 +49,17 @@ static char	*read_storage(int fd, char *rest_storage)
 	return (rest_storage);
 }
 
+/**
+ * @name split_lines
+ * This function extracts the first line from the given storage buffer and 
+ * updates the buffer to contain only the remaining text after
+ * the extracted line.
+ * @param rest_storage A double pointer to the storage buffer. This function 
+ *        will modify the buffer to remove the extracted line and
+ *        leave the rest.
+ * @return The extracted line, including the newline character. Returns NULL 
+ *         if there is no line to extract.
+ */
 static char	*split_lines(char **rest_storage)
 {
 	char	*final_line;
@@ -65,6 +87,15 @@ static char	*split_lines(char **rest_storage)
 	return (final_line);
 }
 
+/**
+ * @name get_next_line
+ * This function reads a line from the given file descriptor. It maintains 
+ * static storage buffers for each file descriptor to handle any leftover text.
+ * @param fd The file descriptor to read from.
+ * @return The next line from the file, including the newline character if it 
+ *         is present. Returns NULL if there is no more text to read or if 
+ *         an error occurs.
+ */
 char	*get_next_line(int fd)
 {
 	static char		*rest_storage = NULL;
@@ -86,3 +117,30 @@ char	*get_next_line(int fd)
 	rest_storage = NULL;
 	return (0);
 }
+
+// #include "get_next_line.h"
+//
+// void ft_leaks()
+// {
+//     system("leaks -q a.out");
+// }
+//
+// int main()
+// {
+//     atexit(ft_leaks);
+//     int     fd = open("HarryPotter.txt", O_RDONLY);
+//     char*   line;
+//
+//     line = get_next_line(fd);
+//     if (line == NULL)
+//         printf("There was an error trying to read te document \n");
+//     while (line)
+//     {
+//         printf("This is the line: %s\n", line);
+//         free(line);
+//         line = get_next_line(fd);
+//     }
+//     close(fd);
+//     return (0);
+// }
+//
