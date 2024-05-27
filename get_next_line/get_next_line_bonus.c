@@ -1,7 +1,7 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   get_next_line.c                                    :+:      :+:    :+:   */
+/*   get_next_line_bonus.c								:+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: crizapat <crizapat@student.42madrid.com>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
@@ -10,7 +10,7 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "get_next_line.h"
+#include "get_next_line_bonus.h"
 
 static char	*read_storage(int fd, char *rest_storage)
 {
@@ -67,22 +67,22 @@ static char	*split_lines(char **rest_storage)
 
 char	*get_next_line(int fd)
 {
-	static char		*rest_storage = NULL;
+	static char		*rest_storage[1024];
 	char			*line;
 
 	if (fd < 0 || BUFFER_SIZE <= 0)
 		return (NULL);
-	rest_storage = read_storage(fd, rest_storage);
-	if (rest_storage == NULL)
+	rest_storage[fd] = read_storage(fd, rest_storage[fd]);
+	if (rest_storage[fd] == NULL)
 		return (NULL);
-	if (rest_storage != NULL)
+	if (rest_storage[fd] != NULL)
 	{
-		line = split_lines(&rest_storage);
+		line = split_lines(&rest_storage[fd]);
 		if (line == NULL)
 			return (NULL);
 		return (line);
 	}
-	free(rest_storage);
-	rest_storage = NULL;
+	free(rest_storage[fd]);
+	rest_storage[fd] = NULL;
 	return (0);
 }
