@@ -3,17 +3,17 @@
 /*                                                        :::      ::::::::   */
 /*   get_next_line.h                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: crizapat <crizapat@student.42madrid.com>   +#+  +:+       +#+        */
+/*   By: crizapat <crizapat@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/17 11:55:12 by crizapat          #+#    #+#             */
-/*   Updated: 2024/05/20 17:17:44 by crizapat         ###   ########.fr       */
+/*   Updated: 2024/05/27 11:47:42 by crizapat         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef GET_NEXT_LINE_H 
+#ifndef GET_NEXT_LINE_H
 # define GET_NEXT_LINE_H
 
-# ifndef BUFFER_SIZE 
+# ifndef BUFFER_SIZE
 #  define BUFFER_SIZE 4
 # endif
 
@@ -33,4 +33,4 @@ char	*ft_strdup(const char *str);
 size_t	ft_strlen(const char *str);
 char	*get_next_line(int fd);
 
-#endif 
+#endif
