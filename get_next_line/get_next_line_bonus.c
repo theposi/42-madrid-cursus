@@ -1,12 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   get_next_line_bonus.c								:+:      :+:    :+:   */
+/*   get_next_line_bonus.c                              :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: crizapat <crizapat@student.42madrid.com>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/17 11:55:19 by crizapat          #+#    #+#             */
-/*   Updated: 2024/05/20 17:29:49 by crizapat         ###   ########.fr       */
+/*   Updated: 2024/05/27 11:05:34 by crizapat         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -52,9 +52,11 @@ static char	*read_storage(int fd, char *rest_storage)
 /**
  * @name split_lines
  * This function extracts the first line from the given storage buffer and 
- * updates the buffer to contain only the remaining text after the extracted line.
+ * updates the buffer to contain only the remaining text after
+ * the extracted line.
  * @param rest_storage A double pointer to the storage buffer. This function 
- *        will modify the buffer to remove the extracted line and leave the rest.
+ *        will modify the buffer to remove the extracted line and
+ *        leave the rest.
  * @return The extracted line, including the newline character. Returns NULL 
  *         if there is no line to extract.
  */
