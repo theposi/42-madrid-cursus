@@ -6,7 +6,7 @@
 /*   By: crizapat <crizapat@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/17 11:55:19 by crizapat          #+#    #+#             */
-/*   Updated: 2024/05/28 14:54:07 by crizapat         ###   ########.fr       */
+/*   Updated: 2024/05/28 20:45:57 by crizapat         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,28 +25,31 @@
  */
 static char	*read_storage(int fd, char *rest_storage)
 {
-	char		buffer[BUFFER_SIZE + 1];
+	char		*buffer;
 	char		*tmp;
 	ssize_t		bytes_to_read;
 
+	buffer = malloc(BUFFER_SIZE + 1);
+	if (!buffer)
+		return (free(rest_storage), NULL);
 	bytes_to_read = 1;
 	while (bytes_to_read > 0)
 	{
 		if (ft_strchr(rest_storage, '\n'))
-			return (rest_storage);
+			return (free(buffer), rest_storage);
 		bytes_to_read = read(fd, buffer, BUFFER_SIZE);
 		if (bytes_to_read < 0)
-			return (NULL);
-		if (bytes_to_read == 0 && !rest_storage)
-			return (NULL);
+			return (free(buffer), free(rest_storage), NULL);
+		if (bytes_to_read == 0)
+			return (free(buffer), rest_storage);
 		buffer[bytes_to_read] = '\0';
 		tmp = rest_storage;
 		rest_storage = ft_strjoin(rest_storage, buffer);
-		if (rest_storage == NULL)
-			return (free(tmp), NULL);
 		free(tmp);
+		if (!rest_storage)
+			return (free(buffer), NULL);
 	}
-	return (rest_storage);
+	return (free(buffer), rest_storage);
 }
 
 /**
