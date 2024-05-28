@@ -6,7 +6,7 @@
 /*   By: crizapat <crizapat@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/17 11:55:19 by crizapat          #+#    #+#             */
-/*   Updated: 2024/05/27 17:49:28 by crizapat         ###   ########.fr       */
+/*   Updated: 2024/05/28 11:41:47 by crizapat         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -43,7 +43,7 @@ static char	*read_storage(int fd, char *rest_storage)
 		tmp = rest_storage;
 		rest_storage = ft_strjoin(rest_storage, buffer);
 		if (rest_storage == NULL)
-			return (NULL);
+			return (free(tmp), NULL);
 		free(tmp);
 	}
 	return (rest_storage);
@@ -96,51 +96,42 @@ static char	*split_lines(char **rest_storage)
  *         is present. Returns NULL if there is no more text to read or if 
  *         an error occurs.
  */
+
 char	*get_next_line(int fd)
 {
-	static char		*rest_storage = NULL;
-	char			*line;
+	static char	*rest_storage = NULL;
+	char		*line;
 
 	if (fd < 0 || BUFFER_SIZE <= 0)
 		return (NULL);
 	rest_storage = read_storage(fd, rest_storage);
 	if (rest_storage == NULL)
 		return (NULL);
-	if (rest_storage != NULL)
+	line = split_lines(&rest_storage);
+	if (line == NULL && rest_storage)
 	{
-		line = split_lines(&rest_storage);
-		if (line == NULL)
-			return (NULL);
-		return (line);
+		free(rest_storage);
+		rest_storage = NULL;
 	}
-	free(rest_storage);
-	rest_storage = NULL;
-	return (0);
+	return (line);
 }
 
-#include "get_next_line.h"
-
-void ft_leaks()
-{
-system("leaks -q a.out");
-}
-
-int main()
-{
-atexit(ft_leaks);
-int     fd = open("HarryPotter.txt", O_RDONLY);
-char*   line;
-
-line = get_next_line(fd);
-if (line == NULL)
-printf("There was an error trying to read te document \n");
-while (line)
-{
-printf("This is the line: %s\n", line);
-free(line);
-line = get_next_line(fd);
-}
-close(fd);
-return (0);
-}
-
+// #include "get_next_line.h"
+//
+// int main()
+// {
+// 	int     fd = open("./test/HarryPotter.txt", O_RDONLY);
+// 	char*   line;
+//
+// 	line = get_next_line(fd);
+// 	if (line == NULL)
+// 		printf("There was an error trying to read te document \n");
+// 	while (line)
+// 	{
+// 		printf("This is the line: %s\n", line);
+// 		free(line);
+// 		line = get_next_line(fd);
+// 	}
+// 	close(fd);
+// 	return (0);
+// }

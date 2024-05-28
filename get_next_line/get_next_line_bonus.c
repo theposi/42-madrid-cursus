@@ -6,7 +6,7 @@
 /*   By: crizapat <crizapat@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/17 11:55:19 by crizapat          #+#    #+#             */
-/*   Updated: 2024/05/27 17:49:29 by crizapat         ###   ########.fr       */
+/*   Updated: 2024/05/28 14:54:07 by crizapat         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,11 +25,10 @@
  */
 static char	*read_storage(int fd, char *rest_storage)
 {
-	char		*buffer;
+	char		buffer[BUFFER_SIZE + 1];
 	char		*tmp;
 	ssize_t		bytes_to_read;
 
-	buffer = malloc(BUFFER_SIZE + 1);
 	bytes_to_read = 1;
 	while (bytes_to_read > 0)
 	{
@@ -44,7 +43,7 @@ static char	*read_storage(int fd, char *rest_storage)
 		tmp = rest_storage;
 		rest_storage = ft_strjoin(rest_storage, buffer);
 		if (rest_storage == NULL)
-			return (NULL);
+			return (free(tmp), NULL);
 		free(tmp);
 	}
 	return (rest_storage);
@@ -99,30 +98,27 @@ static char	*split_lines(char **rest_storage)
  */
 char	*get_next_line(int fd)
 {
-	static char		*rest_storage[1024];
-	char			*line;
+	static char	*rest_storage[1024];
+	char		*line;
 
 	if (fd < 0 || BUFFER_SIZE <= 0)
 		return (NULL);
 	rest_storage[fd] = read_storage(fd, rest_storage[fd]);
 	if (rest_storage[fd] == NULL)
 		return (NULL);
-	if (rest_storage[fd] != NULL)
+	line = split_lines(&rest_storage[fd]);
+	if (line == NULL && rest_storage[fd])
 	{
-		line = split_lines(&rest_storage[fd]);
-		if (line == NULL)
-			return (NULL);
-		return (line);
+		free(rest_storage[fd]);
+		rest_storage[fd] = NULL;
 	}
-	free(rest_storage[fd]);
-	rest_storage[fd] = NULL;
-	return (0);
+	return (line);
 }
 
 // int main()
 // {
-// 	int fd = open("bonus1.txt", O_RDONLY);
-// 	int fd2 = open("bonus2.txt", O_RDONLY);
+// 	int fd = open("./test/bonus1.txt", O_RDONLY);
+// 	int fd2 = open("./test/bonus2.txt", O_RDONLY);
 //
 // 	char *test1 = get_next_line(fd);
 // 	char *test2 = get_next_line(fd2);
