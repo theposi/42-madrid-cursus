@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   utils.c                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: crizapat <crizapat@student.42madrid.com>   +#+  +:+       +#+        */
+/*   By: crizapat <crizapat@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/08/27 10:52:30 by crizapat          #+#    #+#             */
-/*   Updated: 2024/08/27 14:26:51 by crizapat         ###   ########.fr       */
+/*   Updated: 2024/09/06 11:31:31 by crizapat         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,12 +14,13 @@
 
 int ft_putchar(char charac, int *index)
 {
-    write(1, &charac, 1);
+    if (write(1, &charac, 1) == -1)
+      return (-1);
     (*index)++;
-    return (1);
+    return (0);
 }
 
-int ft_putnumb(int numb, int *index)
+void ft_putnumb(int numb, int *index)
 {
 	unsigned int	number;
 
@@ -29,13 +30,12 @@ int ft_putnumb(int numb, int *index)
 	}
 	else
 	{
-        char sign;
+    char sign;
 
-        sign = '-';
-		number = -numb;
-        ft_putchar(sign, index);
-
-	}
+    sign = '-';
+    number = -numb;
+    ft_putchar(sign, index);
+  }
 	if (number >= 10)
 	{
 		ft_putnumb(numb / 10, index);
@@ -45,49 +45,62 @@ int ft_putnumb(int numb, int *index)
 	{
 		ft_putchar((number + '0'), index);
 	}
-    return (1);
+    return;
 }
 
-int ft_putstr(char *str, int *index)
+void ft_putstr(char *str, int *index)
 {
     int i;
 
     i = 0;
     if (!str)
-        return (0);
+        return;
     while (str[i] != '\0')
     {
-        write(1, &str[i], 1);
-        (*index)++;
-        i++;
+      write(1, &str[i], 1);
+      (*index)++;
+      i++;
     }
-    return (1);
+    return;
 }
 
-int ft_puthex(unsigned long int numb, char format, int *index)
+void ft_puthex(unsigned long n, char format, int *index)
 {
-    int i;
-    char *base;
-    unsigned int base_lenght;
+	int				    i;
+	char			    *base;
+	unsigned int  base_length;
+
+	if (format == 'X')
+		base = "0123456789ABCDEF";
+	else
+		base = "0123456789abcdef";
+	i = 0;
+	base_length = 16;
+	if (n > (base_length -1))
+    {
+		  ft_puthex(n / base_length, format, index);
+      i++; 
+    }
+	ft_putchar(*(base + (n % base_length)), index);
+  i++;
+	return;
 }
 
-
-int  ft_nbr_unsigned(unsigned n, int *index)
+void	ft_unsigned_numb(unsigned int n, int *index)
 {
-  if (n >= 10)
-    ft_nbr_unsigned(n / 10, index);
-  ft_putchar(((n % 10) + '0'), index);
-  return (n);
+	if (n >= 10)
+		ft_unsigned_numb(n / 10, index);
+	ft_putchar(((n % 10) + '0'), index);
 }
 
-int  ft_pointer_direction(void *ptr, char format, int *index)
+void	ft_pointer_dir(void *ptr, char format, int *index)
 {
-  if (!ptr)
-  {
-    ft_putstr("(nil)", index);
-    return (-1);
-  }
-  ft_putstr("0x", index);
-  ft_puthex((unsigned long) ptr, format, index);
-  return (0);
+	if (!ptr)
+	{
+		ft_putstr("(nil)", index);
+		return;
+	}
+	ft_putstr("0x", index);
+	ft_puthex((unsigned long) ptr, format, index);
+	return;
 }
