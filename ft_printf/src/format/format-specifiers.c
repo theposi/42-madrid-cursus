@@ -12,42 +12,29 @@
 
 #include "../../ft_printf.h"
 
-void format_catcher(char format, va_list args, int *index)
+int	ft_putchar(char charac, int *index)
 {
-    if (format == 'c')
-    {
-        char c = (char)va_arg(args, int);
-        ft_putchar(c, index);
-    }
-    else if (format == 's')
-    {
-        char *str = va_arg(args, char *);
-        ft_putstr(str, index);
-    }
-    else if (format == 'i' || format == 'd')
-    {
-        int numb = va_arg(args, int);
-        ft_putnumb(numb, index);
-    }
-    else if (format == 'x' || format == 'X')
-    {
-        unsigned int numb = va_arg(args, unsigned int);
-        ft_puthex(numb, format, index);
-    }
-    else if (format == 'p')
-    {
-        void *ptr = va_arg(args, void *);
-        ft_pointer_dir(ptr, format, index);
-    }
-    else if (format == 'u')
-    {
-        unsigned int unsigned_numb = va_arg(args, unsigned int);
-        ft_unsigned_numb(unsigned_numb, index);
-    }
-    else if (format == '%')
-    {
-        char module = '%';
-        ft_putchar(module, index);
-    }
-    return;
+	if (write(1, &charac, 1) == -1)
+		return (-1);
+	(*index)++;
+	return (0);
+}
+
+void	format_catcher(char format, va_list args, int *index)
+{
+	if (format == 'c')
+		ft_putchar((char)va_arg(args, int), index);
+	else if (format == 's')
+		ft_putstr(va_arg(args, char *), index);
+	else if (format == 'i' || format == 'd')
+		ft_putnumb(va_arg(args, int), index);
+	else if (format == 'x' || format == 'X')
+		ft_puthex(va_arg(args, unsigned int), format, index);
+	else if (format == 'p')
+		ft_pointer_dir(va_arg(args, void *), format, index);
+	else if (format == 'u')
+		ft_unsigned_numb(va_arg(args, unsigned int), index);
+	else if (format == '%')
+		ft_putchar('%', index);
+	return ;
 }

@@ -12,17 +12,10 @@
 
 #include "../../ft_printf.h"
 
-int ft_putchar(char charac, int *index)
-{
-    if (write(1, &charac, 1) == -1)
-      return (-1);
-    (*index)++;
-    return (0);
-}
-
-void ft_putnumb(int numb, int *index)
+void	ft_putnumb(int numb, int *index)
 {
 	unsigned int	number;
+	char			sign;
 
 	if (numb >= 0)
 	{
@@ -30,12 +23,10 @@ void ft_putnumb(int numb, int *index)
 	}
 	else
 	{
-    char sign;
-
-    sign = '-';
-    number = -numb;
-    ft_putchar(sign, index);
-  }
+		sign = '-';
+		number = -numb;
+		ft_putchar(sign, index);
+	}
 	if (number >= 10)
 	{
 		ft_putnumb(numb / 10, index);
@@ -45,30 +36,30 @@ void ft_putnumb(int numb, int *index)
 	{
 		ft_putchar((number + '0'), index);
 	}
-    return;
+	return ;
 }
 
-void ft_putstr(char *str, int *index)
+void	ft_putstr(char *str, int *index)
 {
-    int i;
+	int	i;
 
-    i = 0;
-    if (!str)
-        return;
-    while (str[i] != '\0')
-    {
-      write(1, &str[i], 1);
-      (*index)++;
-      i++;
-    }
-    return;
+	i = 0;
+	if (!str)
+		return ;
+	while (str[i] != '\0')
+	{
+		write(1, &str[i], 1);
+		(*index)++;
+		i++;
+	}
+	return ;
 }
 
-void ft_puthex(unsigned long n, char format, int *index)
+void	ft_puthex(unsigned long n, char format, int *index)
 {
-	int				    i;
-	char			    *base;
-	unsigned int  base_length;
+	int				i;
+	char			*base;
+	unsigned int	base_length;
 
 	if (format == 'X')
 		base = "0123456789ABCDEF";
@@ -77,13 +68,13 @@ void ft_puthex(unsigned long n, char format, int *index)
 	i = 0;
 	base_length = 16;
 	if (n > (base_length -1))
-    {
-		  ft_puthex(n / base_length, format, index);
-      i++; 
-    }
+	{
+		ft_puthex(n / base_length, format, index);
+		i++;
+	}
 	ft_putchar(*(base + (n % base_length)), index);
-  i++;
-	return;
+	i++;
+	return ;
 }
 
 void	ft_unsigned_numb(unsigned int n, int *index)
@@ -91,6 +82,7 @@ void	ft_unsigned_numb(unsigned int n, int *index)
 	if (n >= 10)
 		ft_unsigned_numb(n / 10, index);
 	ft_putchar(((n % 10) + '0'), index);
+	return ;
 }
 
 void	ft_pointer_dir(void *ptr, char format, int *index)
@@ -98,9 +90,9 @@ void	ft_pointer_dir(void *ptr, char format, int *index)
 	if (!ptr)
 	{
 		ft_putstr("(nil)", index);
-		return;
+		return ;
 	}
 	ft_putstr("0x", index);
 	ft_puthex((unsigned long) ptr, format, index);
-	return;
+	return ;
 }

@@ -16,33 +16,24 @@ int	ft_printf(char const *format, ...)
 {
 	int			i;
 	int			printed_chars;
-    va_list		args;
+	va_list		args;
 
 	i = 0;
-    printed_chars = 0;
-    va_start(args, format);
-    while (format[i] != '\0')
-    {
-        if (format[i] == '%')
-        {
-            i++;
-            format_catcher(format[i], args, &printed_chars);
-        }
-        else
-        {
-            ft_putchar(format[i], &printed_chars);
-        }
-        i++;
-    }
-    va_end(args);
-    return (printed_chars);
-}
-
-int main() {
-    /*char *string = "Hola Mundo!";*/
-
-    char sign = '%';
-    int printed_characs = ft_printf("My fn: %%\n", sign);
-    printf("Own: %d\n", printed_characs);
-    return 0;
+	printed_chars = 0;
+	va_start(args, format);
+	while (format[i] != '\0')
+	{
+		if (format[i] == '%')
+		{
+			i++;
+			format_catcher(format[i], args, &printed_chars);
+		}
+		else
+		{
+			ft_putchar(format[i], &printed_chars);
+		}
+		i++;
+	}
+	va_end(args);
+	return (printed_chars);
 }

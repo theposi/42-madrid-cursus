@@ -23,5 +23,6 @@ void	ft_puthex(unsigned long n, char format, int *index);
 void	ft_unsigned_numb(unsigned int n, int *index);
 void	ft_pointer_dir(void *ptr, char format, int *index);
 void	format_catcher(char format, va_list args, int *index);
+int		ft_printf(char const *format, ...);
 
 #endif
