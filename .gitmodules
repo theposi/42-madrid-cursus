@@ -1,0 +1,12 @@
+[submodule "Get-Next-Line"]
+	path = Get-Next-Line
+	url = https://github.com/theposi/Get-Next-Line
+[submodule "B2BR"]
+	path = B2BR
+	url = https://github.com/theposi/B2BR
+[submodule "libft"]
+	path = libft
+	url = https://github.com/theposi/libft
+[submodule "ft_printf"]
+	path = ft_printf
+	url = https://github.com/theposi/ft_printf
